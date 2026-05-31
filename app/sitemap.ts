@@ -20,6 +20,7 @@ const routes = [
   "/cv-maken-gratis",
   "/vakbonden-en-cv-belgie",
   "/studentenjob-650-uren",
+  "/profielfoto-cv-maken",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

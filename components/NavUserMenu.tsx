@@ -8,7 +8,6 @@ export default function NavUserMenu() {
     const router = useRouter();
     const [email, setEmail] = useState<string | null>(null);
     const [loggingOut, setLoggingOut] = useState(false);
-    const isOwner = email?.toLowerCase() === "dhinesh217@gmail.com";
 
     useEffect(() => {
         fetch('/api/auth/me')
@@ -34,14 +33,6 @@ export default function NavUserMenu() {
             >
                 Mijn CV&apos;s
             </Link>
-            {isOwner ? (
-                <Link
-                    href="/followups"
-                    className="font-bold text-sm text-black hover:text-yellow-600 transition-colors"
-                >
-                    Follow-ups
-                </Link>
-            ) : null}
             <Link
                 href="/profielfoto-cv-maken"
                 className="font-bold text-sm text-black hover:text-yellow-600 transition-colors"

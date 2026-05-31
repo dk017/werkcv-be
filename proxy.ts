@@ -25,6 +25,7 @@ const INDEXABLE_EXACT_PATHS = new Set([
   "/cv-maken-gratis",
   "/vakbonden-en-cv-belgie",
   "/studentenjob-650-uren",
+  "/profielfoto-cv-maken",
   "/rss.xml",
   "/llms.txt",
   "/.well-known/ai.txt",
