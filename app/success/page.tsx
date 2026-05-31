@@ -29,9 +29,7 @@ export default async function SuccessPage({
     const tr = (dutch: string, english: string) => (resolvedLanguage === "en" ? english : dutch);
     const editorPath = cvId ? getEditorPathForLanguage(resolvedLanguage, cvId) : "/";
     const hasProfilePhotoBundle = bundle === "profile-photo";
-    const profilePhotoPath = resolvedLanguage === "en"
-        ? "/en/profile-photo#profielfoto-tool"
-        : "/profielfoto-cv-maken#profielfoto-tool";
+    const profilePhotoPath = "/profielfoto-cv-maken#profielfoto-tool";
     const paidOrder = cvId
         ? await prisma.order.findFirst({
             where: {

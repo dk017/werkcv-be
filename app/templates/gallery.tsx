@@ -353,7 +353,7 @@ export default function TemplateGallery({
 
       if (!response.ok) {
         if (response.status === 401) {
-          router.push(`/login?next=${encodeURIComponent(isEnglish ? "/en/templates" : "/templates")}`);
+          router.push(`/login?next=${encodeURIComponent("/templates")}`);
           return;
         }
         const message = data?.error || `Request failed with status ${response.status}`;
@@ -364,7 +364,7 @@ export default function TemplateGallery({
         throw new Error("Missing cvId in create-cv response");
       }
 
-      router.push(`${isEnglish ? "/en/editor" : "/editor"}?id=${data.cvId}`);
+      router.push(`/editor?id=${data.cvId}`);
     } catch (error) {
       console.error("Error creating CV:", error);
     } finally {

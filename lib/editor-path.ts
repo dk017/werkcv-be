@@ -1,12 +1,12 @@
 import { CVData } from "@/lib/cv";
 import { getResumeLanguage, ResumeLanguage } from "@/lib/resume-language";
 
-export function getEditorBasePath(language: ResumeLanguage): string {
-  return language === "en" ? "/en/editor" : "/editor";
+export function getEditorBasePath(_language: ResumeLanguage): string {
+  return "/editor";
 }
 
-export function getTemplatesPathForLanguage(language: ResumeLanguage): string {
-  return language === "en" ? "/en/templates" : "/templates";
+export function getTemplatesPathForLanguage(_language: ResumeLanguage): string {
+  return "/templates";
 }
 
 export function getEditorPathForLanguage(language: ResumeLanguage, cvId?: string): string {

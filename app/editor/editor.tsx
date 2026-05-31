@@ -923,7 +923,7 @@ export default function Editor({
                                         </p>
                                     </div>
                                     <Link
-                                        href={isEnglish ? "/en/profile-photo" : "/profielfoto-cv-maken"}
+                                        href="/profielfoto-cv-maken"
                                         className="inline-flex shrink-0 items-center justify-center border-2 border-black bg-[#4ECDC4] px-4 py-2 text-xs font-black text-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
                                     >
                                         {tr("Maak profielfoto €9,99", "Create profile photo €9.99")}

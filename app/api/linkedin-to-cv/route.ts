@@ -128,7 +128,7 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    const editorPath = `${documentLanguage === 'en' ? '/en/editor' : '/editor'}?id=${cv.id}`;
+    const editorPath = `/editor?id=${cv.id}`;
 
     return NextResponse.json({
       success: true,
