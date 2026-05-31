@@ -18,22 +18,49 @@ It does **not** need a separate server.
 
 ---
 
+## Confirmed current server shape
+
+- public reverse proxy: **nginx**
+- Dutch app proxy target: `127.0.0.1:3001`
+- local tools app uses `3000`
+- `3002` is already occupied by another local app on the VPS
+- shared Postgres container is in the Docker network:
+
+```text
+werkcv_default
+```
+
+- Dutch app container is attached there as:
+
+```text
+werkcv-app-1
+```
+
+- shared Postgres container name:
+
+```text
+werkcv-db-1
+```
+
+This means the Belgian app should use a **different host port**, and `3003` is the clean default.
+
+---
+
 ## Recommended production shape
 
 ### Keep shared
 
 - Same Hetzner VPS
 - Same Postgres container
-- Same mail provider class
 - Same deployment pattern (GitHub Actions -> GHCR -> pull image on server)
 
 ### Separate
 
 - GitHub repository for `werkcv-be`
-- GHCR image name for `werkcv-be`
-- deploy directory, for example `/opt/werkcv-be`
-- Docker compose project name, for example `werkcv-be`
-- app host port, for example `3002`
+- GHCR image name: `ghcr.io/dk017/werkcv-be-app`
+- deploy directory: `/opt/werkcv-be`
+- Docker compose project name: `werkcv-be`
+- app host port: `3003`
 - Postgres database name: `werkcv_be`
 - `.env` file in `/opt/werkcv-be/.env`
 
@@ -111,17 +138,40 @@ That is external coordination, not app runtime configuration.
 
 ---
 
+## Shared Postgres connection model
+
+The Belgian app should **not** start its own Postgres container.
+
+Instead:
+
+- attach the BE app to the existing Docker network:
+
+```text
+werkcv_default
+```
+
+- point `DATABASE_URL` to:
+
+```text
+postgresql://postgres:***@werkcv-db-1:5432/werkcv_be
+```
+
+This keeps the app and database separation clean without introducing another database container.
+
+---
+
 ## Suggested BE `.env`
 
 Example shape:
 
 ```text
-DATABASE_URL=postgresql://postgres:***@db:5432/werkcv_be
+DATABASE_URL=postgresql://postgres:***@werkcv-db-1:5432/werkcv_be
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=***
 POSTGRES_DB=werkcv_be
+APP_PORT=3003
 
-NEXT_PUBLIC_BASE_URL=https://werkcv.be
+NEXT_PUBLIC_APP_URL=https://werkcv.be
 AUTH_FROM_EMAIL=contact@werkcv.be
 CONTACT_TO_EMAIL=contact@werkcv.be
 B2B_LEADS_TO=contact@werkcv.be
@@ -132,7 +182,9 @@ SMTP_USER=...
 SMTP_PASS=...
 
 DODO_API_KEY=...
+DODO_PRODUCT_ID=...
 DODO_WEBHOOK_SECRET=...
+DODO_ENVIRONMENT=live_mode
 ```
 
 Use Belgian addresses and Belgian base URL values in the BE `.env`.
@@ -153,59 +205,59 @@ Recommended runtime split:
 
 ```text
 werkcv.nl app   -> host port 3001
-werkcv.be app   -> host port 3002
+werkcv.be app   -> host port 3003
 ```
 
-Then route domains at the reverse proxy level.
+Then route domains at the nginx level.
 
 ---
 
-## Compose / project naming
+## Nginx routing
 
-Current NL stack uses project name:
+The server currently proxies:
 
-```text
-werkcv
-```
+- `werkcv.nl` -> `127.0.0.1:3001`
 
-Recommended BE stack:
+For Belgium, add a new nginx server block:
 
 ```text
-werkcv-be
+werkcv.be
+www.werkcv.be
 ```
 
-This avoids container-name collisions and keeps maintenance clearer.
+Proxy target:
+
+```text
+http://127.0.0.1:3003
+```
 
 ---
 
 ## Repo and image naming
 
-Recommended GitHub repo:
+GitHub repo:
 
 ```text
 dk017/werkcv-be
 ```
 
-Recommended image naming:
+Image naming:
 
 ```text
 ghcr.io/dk017/werkcv-be-app
 ```
 
-Do not reuse the current NL image name if the repositories are separate.
-
 ---
 
 ## Immediate next steps
 
-1. Create GitHub repo for `werkcv-be`
-2. Push the Belgian fork there
-3. Add a dedicated BE GitHub Actions workflow or adapt the current one for the new repo
-4. Create Postgres database `werkcv_be`
-5. Create `/opt/werkcv-be` on the Hetzner server
-6. Add BE `.env`
-7. Deploy BE app on a separate host port
-8. Point `werkcv.be` to the BE stack
+1. Create Postgres database `werkcv_be`
+2. Create `/opt/werkcv-be` on the Hetzner server
+3. Add `/opt/werkcv-be/.env`
+4. Deploy BE app on host port `3003`
+5. Add nginx config for `werkcv.be`
+6. Point DNS A record for `werkcv.be` to `65.108.243.208`
+7. Issue/refresh TLS cert for `werkcv.be`
 
 ---
 

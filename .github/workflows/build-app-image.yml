@@ -14,7 +14,7 @@ on:
       deploy_dir:
         description: "Remote checkout directory"
         required: true
-        default: "/opt/werkcv"
+        default: "/opt/werkcv-be"
 
 jobs:
   build:
@@ -35,7 +35,7 @@ jobs:
         id: meta
         run: |
           OWNER_LC="$(echo "$GITHUB_REPOSITORY_OWNER" | tr '[:upper:]' '[:lower:]')"
-          echo "image=ghcr.io/${OWNER_LC}/werkcv-app" >> "$GITHUB_OUTPUT"
+          echo "image=ghcr.io/${OWNER_LC}/werkcv-be-app" >> "$GITHUB_OUTPUT"
           echo "tag=sha-${GITHUB_SHA}" >> "$GITHUB_OUTPUT"
 
       - name: Set up Docker Buildx
@@ -97,6 +97,6 @@ jobs:
             if [ -n "${GHCR_TOKEN:-}" ]; then
               echo "$GHCR_TOKEN" | docker login ghcr.io -u "$GHCR_USER" --password-stdin
             fi
-            docker compose -p werkcv -f docker-compose.ghcr.yml pull app
-            docker compose -p werkcv -f docker-compose.ghcr.yml up -d app
-            docker compose -p werkcv ps
+            docker compose -p werkcv-be -f docker-compose.ghcr.yml pull app
+            docker compose -p werkcv-be -f docker-compose.ghcr.yml up -d app
+            docker compose -p werkcv-be -f docker-compose.ghcr.yml ps
