@@ -1,0 +1,47 @@
+keyword,source,cluster,fit,decision,current_coverage,page_type,page_idea,priority,notes
+cv maken,bing,core-builder,strong,keep_existing,/cv-maken,refresh,Keep strengthening the core CV builder hub,high,Main commercial head term
+cv maker,bing,core-builder,strong,new_or_reposition,/beste-cv-maker-nederland,landing,Build or retarget an exact-match cv maker landing for Dutch intent,high,Strongest obvious commercial gap
+cv maken gratis,bing,free-entry,strong,keep_existing,/gratis-cv-maken,refresh,Keep defending the free-start route with transparent pricing,high,High fit if payment timing stays clear
+gratis cv maken,bing,free-entry,strong,keep_existing,/gratis-cv-maken,refresh,Same free-start cluster as cv maken gratis,high,Good acquisition term
+curriculum vitae,bing,formal-builder,strong,keep_existing,/curriculum-vitae-maken,refresh,Defend the formal Dutch CV cluster,medium,Good for broader formal intent
+cv template,bing,template-intent,strong,keep_existing,/cv-maken-template,refresh,Defend the main template-selection page,high,High conversion fit
+cv voorbeeld,bing,example-intent,strong,keep_existing,/cv-voorbeeld,refresh,Defend the examples hub,high,Strong commercial-informational mix
+voorbeeld cv,bing,example-intent,strong,keep_existing,/cv-voorbeelden,refresh,Support the examples cluster with internal links,medium,Same intent family
+cv format,bing+gemini,format-intent,strong,new,/cv-opmaak-voorbeeld,landing,Build an exact-match Dutch cv format page linked into templates and examples,high,Clearest Dutch content gap
+cv opstellen,bing,build-guidance,strong,keep_existing,/cv-opstellen,refresh,Keep as a how-to builder page,medium,Good supporting guide term
+hoe maak je een cv,bing,build-guidance,strong,keep_existing,/cv-maken,refresh,Expand FAQs and direct answer blocks on the main builder page,medium,High-fit informational term
+cv maken online,bing,core-builder,strong,keep_existing,/online-cv-maken,refresh,Keep as a strong mid-funnel builder route,medium,Good search intent match
+transitievergoeding berekenen,bing,calculator,strong,keep_existing,/tools/transitievergoeding-berekenen,refresh,Defend the current tool with richer synonyms and FAQ coverage,high,Top calculator keyword
+transitievergoeding,bing,calculator,strong,keep_existing,/tools/transitievergoeding-berekenen,refresh,Strengthen broad head-term relevance on the tool page,high,Same core tool cluster
+transitievergoeding 2026,bing,calculator,strong,keep_existing,/tools/transitievergoeding-berekenen,refresh,Keep year-sensitive headings and examples current,high,Strong annual variant
+ontslagvergoeding berekenen,bing,calculator,strong,expand_existing,/tools/transitievergoeding-berekenen,refresh,Add this synonym to H1/H2/meta/FAQ and possibly a canonical alias page,high,Biggest synonym gap in the tool cluster
+gratis cv check,gemini,cv-analysis,strong,new_or_retarget,/tools/cv-score,landing,Create a dedicated free CV check landing that funnels into the CV score tool,high,Very sale-adjacent problem-solution term
+cv check,gemini,cv-analysis,strong,expand_existing,/tools/cv-score,refresh,Retarget existing CV score copy and metadata toward plain-language cv check intent,high,Broad but highly relevant
+cv beoordeling,gemini,cv-analysis,strong,expand_existing,/tools/cv-score,refresh,Add exact Dutch phrasing to CV score page sections and FAQ,high,Natural fit for the quality score tool
+cv score berekenen,gemini,cv-analysis,strong,expand_existing,/tools/cv-score,refresh,Use exact-match wording on the CV score page,high,Strong tool-intent keyword
+cv checken op fouten,gemini,cv-analysis,strong,new_support,/tools/cv-score,article_or_section,Add a section or support page focused on common Dutch CV mistakes,medium,Good support keyword for CV score
+ats vriendelijk cv,gemini,ats,strong,keep_existing,/ats-cv-template,refresh,Keep defending ATS-friendly template intent,medium,Already well aligned
+cv scanner online,gemini,ats,strong,expand_existing,/tools/ats-cv-checker,refresh,Retarget ATS checker toward scanner language used by non-technical searchers,high,Good fit for the ATS upload flow
+cv door ai laten checken,gemini,ats,strong,expand_existing,/tools/ats-cv-checker,refresh,Add AI-check phrasing to ATS checker or CV score page,medium,Modern framing that can convert
+cv afgewezen door ats,gemini,problem-solution,strong,new,/cv-tips/waarom-cv-afgewezen,article,Create a problem-solution article that funnels into ATS checker and CV score,high,Strong pain-driven intent
+waarom wordt mijn cv afgewezen,gemini,problem-solution,strong,new,/cv-tips/waarom-cv-afgewezen,article,Build a root rejection article and avoid splitting too many near-duplicate pages,high,High emotional commercial intent
+cv trefwoorden finder,gemini,keywords,strong,expand_existing,/tools/cv-keywords,refresh,Retarget the keywords tool to Dutch phrasing instead of English-heavy wording,medium,Good functional fit
+trefwoorden scanner cv,gemini,keywords,strong,expand_existing,/tools/cv-keywords,refresh,Add this exact phrase to the CV keywords tool,medium,Useful Dutch long-tail
+cv optimalisatie,gemini,optimization,medium,expand_existing,/tools/cv-keywords,article_or_section,Use as supporting copy not a standalone primary landing,medium,Too broad for a first standalone page
+cv optimaliseren voor recruiters,gemini,optimization,medium,new_support,/cv-tips/cv-optimaliseren-voor-recruiters,article,Possible support article if the CV score cluster performs,medium,Better as advice content than product landing
+zzp naar loondienst cv,gemini,career-shift,strong,new,/cv-tips/zzp-naar-loondienst-cv,article,Build a transition guide from freelance projects to corporate CV language,high,Strong 2026 problem-solution angle
+cv voorbeeld zzp'er,bing+existing,role-specific,strong,keep_existing,/cv-gids/cv-voorbeeld-zzper,refresh,Refresh and internally link the existing ZZP example page,medium,Already covered
+english cv for dutch job market,gemini,expat,strong,keep_existing,/en/dutch-cv-template,refresh,Strengthen the English expat cluster you already have,medium,Relevant but not a new build
+dutch cv vs international resume,gemini,expat,strong,keep_existing,/en/cv-or-resume-netherlands,refresh,Keep supporting expat comparison intent,medium,Already covered
+cv format netherlands for foreigners,gemini,expat,strong,keep_existing,/en/guides/cv-format-netherlands-english,refresh,Refresh existing expat format content,medium,Already covered
+working in netherlands without speaking dutch cv,gemini,expat,strong,keep_existing,/en/guides/netherlands-cv-without-dutch-language,refresh,Keep supporting non-Dutch-speaker CV intent,medium,Already covered in expat cluster
+orientation year visa cv tips,gemini,expat,strong,new_or_expand,/tools/zoekjaar-checker,article,Add a CV-focused orientation year guide linked from the zoekjaar tool,medium,Useful expat pain-point angle
+beste cv maker voor expats,gemini,expat-comparison,medium,new,/en/best-cv-builder-for-expats-netherlands,comparison,Potential future English comparison page for expat conversion,medium,Good fit but not first priority
+canva cv,bing+gemini,comparison,strong,keep_existing,/cv-gids/canva-vs-cv-builder-voor-sollicitaties,refresh,Keep defending the Canva comparison cluster,medium,Good alternative-intent traffic
+europass cv,bing+gemini,comparison,strong,keep_existing,/cv-gids/werkcv-vs-europass,refresh,Keep defending Europass alternative intent,medium,Already covered
+cv.nl,bing+gemini,competitor,strong,keep_existing,/cv-gids/werkcv-vs-cv-nl,refresh,Keep as comparison and cancellation traffic not as a main head term,medium,Competitor intent
+cvster,bing+gemini,competitor,strong,keep_existing,/cv-gids/werkcv-vs-cvster,refresh,Keep as comparison and cancellation traffic not as a main head term,medium,Competitor intent
+cvmaker,bing+gemini,competitor,strong,keep_existing,/cv-gids/werkcv-vs-cvmaker,refresh,Keep as comparison and cancellation traffic not as a main head term,medium,Competitor intent
+gratis cv maken zonder kosten,bing,free-download-risk,medium,caution,/gratis-cv-maken,refresh_only,Use only with transparent copy about free start versus paid PDF,low,High expectation mismatch risk
+cv maken gratis downloaden,bing,free-download-risk,medium,caution,/gratis-cv-maken,refresh_only,Use only defensively in copy or FAQ,low,Users may expect fully free PDF download
+gratis cv maken en downloaden,bing,free-download-risk,medium,caution,/gratis-cv-maken,refresh_only,Use only defensively in copy or FAQ,low,Same mismatch risk

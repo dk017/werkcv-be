@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "werkcv/vakantiegeld",
+  "title": "WerkCV Vakantiegeld calculator",
+  "category": "widgets",
+  "icon": "calculator",
+  "description": "Voeg een Nederlandse vakantiegeld calculator toe.",
+  "textdomain": "werkcv-salaris-tools",
+  "attributes": {
+    "cta": {
+      "type": "boolean",
+      "default": false
+    },
+    "footer": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

@@ -1,0 +1,42 @@
+keyword,total_impressions,cluster,intent,priority,status,current_coverage,notes
+cv maken,21643,core-builder,commercial,high,keep,/cv-maken,core head term for the main CV builder
+cv maker,11148,core-builder,commercial,high,gap,/beste-cv-maker-nederland,worth a stronger exact match route or hub
+cv maken gratis,9072,free-entry,commercial,high,keep,/gratis-cv-maken,strong acquisition term with clear builder intent
+gratis cv maken,4796,free-entry,commercial,high,keep,/gratis-cv-maken,same cluster as cv maken gratis
+curriculum vitae,6434,formal-cv,commercial,high,keep,/curriculum-vitae-maken,broad formal variant worth defending as a hub
+cv template,4676,template-intent,commercial,high,keep,/cv-maken-template,strong template selection intent
+cv voorbeeld,4033,example-intent,commercial,high,keep,/cv-voorbeeld,strong examples hub term
+voorbeeld cv,3428,example-intent,commercial,high,keep,/cv-voorbeelden,same example cluster with reversed wording
+cv format,1576,format-intent,informational-commercial,high,gap,/cv-opmaak-voorbeeld,no exact Dutch cv format page yet
+cv opstellen,706,build-guidance,informational-commercial,medium,keep,/cv-opstellen,good how-to builder term already aligned with site
+hoe maak je een cv,673,build-guidance,informational-commercial,medium,keep,/cv-maken,strong query for guide plus CTA flow
+voorbeelden cv,555,example-intent,informational-commercial,medium,keep,/cv-voorbeelden,supporting example variant
+template cv,399,template-intent,commercial,medium,keep,/templates,supporting template variant
+cv maken voorbeeld,206,example-intent,informational-commercial,medium,keep,/cv-voorbeeld,supporting make-plus-example variant
+cv gratis,203,free-entry,commercial,medium,caution,/gratis-cv-maken,ambiguous but still relevant to free start intent
+cv maken gratis nederland,139,free-entry,commercial,medium,keep,/gratis-cv-maken,geo-qualified free-start variant
+cv maken online,130,core-builder,commercial,medium,keep,/online-cv-maken,already aligned with existing route
+transitievergoeding berekenen,7232,calculator,tool,high,keep,/tools/transitievergoeding-berekenen,top calculator term already well matched
+transitievergoeding,2768,calculator,tool,high,keep,/tools/transitievergoeding-berekenen,broad head term for the same tool
+transitievergoeding 2026,1683,calculator,tool,high,keep,/tools/transitievergoeding-berekenen,yearly freshness variant worth defending
+ontslagvergoeding berekenen,897,calculator,tool,high,gap,/tools/transitievergoeding-berekenen,important synonym that should be woven into page copy
+berekening transitievergoeding,765,calculator,tool,medium,keep,/tools/transitievergoeding-berekenen,supporting wording variant
+berekenen transitievergoeding,719,calculator,tool,medium,keep,/tools/transitievergoeding-berekenen,supporting wording variant
+berekening transitievergoeding 2026,684,calculator,tool,medium,keep,/tools/transitievergoeding-berekenen,supporting year variant
+berekenen transitievergoeding 2026,423,calculator,tool,medium,keep,/tools/transitievergoeding-berekenen,supporting year variant
+bereken transitievergoeding 2026,194,calculator,tool,low,keep,/tools/transitievergoeding-berekenen,long tail yearly variant
+canva cv,2732,comparison,comparison,medium,keep,/cv-gids/canva-vs-cv-builder-voor-sollicitaties,comparison intent fits existing guide
+canva cv maken,2284,comparison,comparison,medium,keep,/cv-gids/canva-vs-cv-builder-voor-sollicitaties,same canva comparison cluster
+cv maken canva,761,comparison,comparison,medium,keep,/cv-gids/canva-vs-cv-builder-voor-sollicitaties,same canva comparison cluster
+europass cv,1749,comparison,comparison,medium,keep,/cv-gids/werkcv-vs-europass,good comparison or alternative intent
+cv.nl,2956,competitor,comparison,medium,keep,/cv-gids/werkcv-vs-cv-nl,brand comparison term not a main landing target
+cvster,2146,competitor,comparison,medium,keep,/cv-gids/werkcv-vs-cvster,brand comparison term not a main landing target
+cv ster,1010,competitor,comparison,low,keep,/cv-gids/werkcv-vs-cvster,spacing variant of cvster intent
+cvmaker,937,competitor,comparison,medium,keep,/cv-gids/werkcv-vs-cvmaker,brand comparison term not a main landing target
+gratis cv maken zonder kosten,525,free-download,commercial,medium,caution,/gratis-cv-maken,relevant but risky because user may expect fully free pdf download
+cv maken gratis downloaden,372,free-download,commercial,medium,caution,/gratis-cv-maken,relevant only if copy is transparent about payment point
+gratis cv maken en downloaden,339,free-download,commercial,medium,caution,/gratis-cv-maken,same free download mismatch risk
+gratis cv maken zonder kosten en downloaden,44,free-download,commercial,low,caution,/gratis-cv-maken,small volume and strongest expectation mismatch
+cv maker ai,83,ai-builder,commercial,low,explore,/tools,possible future AI CV builder page if this cluster grows
+cv creator,82,ai-builder,commercial,low,explore,/cv-maken,low-volume English variant
+enhance cv,353,english-improvement,tool,low,explore,/en/guides,English improvement term not core Dutch funnel

@@ -1,0 +1,53 @@
+services:
+  db:
+    image: mariadb:11.4
+    container_name: werkcv-wp-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+      MYSQL_ROOT_PASSWORD: rootpass
+    volumes:
+      - wp_db_data:/var/lib/mysql
+
+  wordpress:
+    image: wordpress:latest
+    container_name: werkcv-wp-app
+    restart: unless-stopped
+    depends_on:
+      - db
+    ports:
+      - "8088:80"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+    volumes:
+      - wp_app_data:/var/www/html
+      - ../../wordpress-plugin/werkcv-salaris-tools:/var/www/html/wp-content/plugins/werkcv-salaris-tools
+
+  cli:
+    image: wordpress:cli
+    container_name: werkcv-wp-cli
+    depends_on:
+      - db
+      - wordpress
+    user: "33:33"
+    working_dir: /var/www/html
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+    volumes:
+      - wp_app_data:/var/www/html
+      - ../../wordpress-plugin/werkcv-salaris-tools:/var/www/html/wp-content/plugins/werkcv-salaris-tools
+      - ./artifacts:/artifacts
+    entrypoint: ["tail", "-f", "/dev/null"]
+
+volumes:
+  wp_db_data:
+  wp_app_data:
+

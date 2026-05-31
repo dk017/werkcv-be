@@ -1,0 +1,47 @@
+keyword,cluster,coverage_status,existing_route,recommended_action,priority,notes
+cv maken,core-builder,covered,/cv-maken,refresh_existing,high,Strong direct commercial page already exists
+cv maker,core-builder,partial,/beste-cv-maker-nederland,retarget_existing,high,Good page exists but not exact-match phrasing
+cv maken gratis,free-entry,covered,/gratis-cv-maken,refresh_existing,high,Existing free-start landing is the right home
+gratis cv maken,free-entry,covered,/gratis-cv-maken,refresh_existing,high,Same intent family as cv maken gratis
+curriculum vitae,formal-builder,covered,/curriculum-vitae-maken,refresh_existing,medium,Strong formal-intent page already exists
+cv template,template-intent,covered,/cv-maken-template,refresh_existing,high,Template selection page already matches intent well
+cv voorbeeld,example-intent,covered,/cv-voorbeeld,refresh_existing,high,Main examples landing exists
+voorbeeld cv,example-intent,covered,/cv-voorbeelden,refresh_existing,medium,Examples hub exists and fits the query family
+cv format,format-intent,partial,/cv-opmaak-voorbeeld,retarget_existing_or_add_alias,high,Current page is close but not exact-match wording
+cv opstellen,build-guidance,covered,/cv-opstellen,refresh_existing,medium,Good instructional page exists
+hoe maak je een cv,build-guidance,partial,/cv-maken,retarget_existing,medium,Intent is covered by the main builder page
+cv maken online,core-builder,covered,/online-cv-maken,refresh_existing,medium,Good mid-funnel builder page exists
+transitievergoeding berekenen,calculator,covered,/tools/transitievergoeding-berekenen,refresh_existing,high,Core calculator already exists
+transitievergoeding,calculator,covered,/tools/transitievergoeding-berekenen,refresh_existing,high,Broad head term maps to the same tool
+transitievergoeding 2026,calculator,covered,/tools/transitievergoeding-berekenen,refresh_existing,high,Existing page is the right home with yearly refreshes
+ontslagvergoeding berekenen,calculator,partial,/tools/transitievergoeding-berekenen,retarget_existing,high,Best handled as a strong synonym on the same tool
+gratis cv check,cv-analysis,partial,/tools/cv-score,retarget_existing_or_add_alias,high,Very strong commercial fit but no exact landing yet
+cv check,cv-analysis,partial,/tools/cv-score,retarget_existing,high,Best mapped to CV score
+cv beoordeling,cv-analysis,partial,/tools/cv-score,retarget_existing,high,Exact Dutch phrasing should be added to CV score page
+cv score berekenen,cv-analysis,partial,/tools/cv-score,retarget_existing,high,Exact-match wording should be added on-page
+cv checken op fouten,cv-analysis,partial,/tools/cv-score,expand_existing,medium,Support keyword for CV score or a sub-section
+ats vriendelijk cv,ats,covered,/ats-cv-template,refresh_existing,medium,Strong ATS template page already exists
+cv scanner online,ats,partial,/tools/ats-cv-checker,retarget_existing,high,Good fit but page should use scanner language more directly
+cv door ai laten checken,ats,partial,/tools/ats-cv-checker,retarget_existing,medium,Modern phrasing to add to ATS checker copy
+cv afgewezen door ats,problem-solution,missing,,build_new,high,No dedicated rejection page yet
+waarom wordt mijn cv afgewezen,problem-solution,missing,,build_new,high,No root rejection page yet
+cv trefwoorden finder,keywords,partial,/tools/cv-keywords,retarget_existing,medium,Tool exists but wording is not Dutch-first enough
+trefwoorden scanner cv,keywords,partial,/tools/cv-keywords,retarget_existing,medium,Should be added to keywords tool language
+cv optimalisatie,optimization,partial,/tools/cv-keywords,expand_existing,medium,Better as support copy than a standalone page
+cv optimaliseren voor recruiters,optimization,missing,,build_new_later,medium,Useful support article but not a first build
+zzp naar loondienst cv,career-shift,missing,,build_new,high,No transition guide exists yet
+cv voorbeeld zzp'er,career-shift,covered,/cv-gids/cv-voorbeeld-zzper,refresh_existing,medium,Existing ZZP example already covers the root intent
+english cv for dutch job market,expat,covered,/en/dutch-cv-template,refresh_existing,medium,English expat page already exists
+dutch cv vs international resume,expat,covered,/en/cv-or-resume-netherlands,refresh_existing,medium,Comparison page already exists
+cv format netherlands for foreigners,expat,covered,/en/guides/cv-format-netherlands-english,refresh_existing,medium,Existing English guide covers this well
+working in netherlands without speaking dutch cv,expat,covered,/en/guides/netherlands-cv-without-dutch-language,refresh_existing,medium,Existing guide matches the intent
+orientation year visa cv tips,expat,partial,/tools/zoekjaar-checker,expand_existing,medium,Only loosely covered through the zoekjaar tool
+beste cv maker voor expats,expat-comparison,missing,,build_new_later,medium,No dedicated English comparison page exists
+canva cv,comparison,covered,/cv-gids/canva-vs-cv-builder-voor-sollicitaties,refresh_existing,medium,Comparison page already exists
+europass cv,comparison,covered,/cv-gids/werkcv-vs-europass,refresh_existing,medium,Comparison page already exists
+cv.nl,competitor,covered,/cv-gids/werkcv-vs-cv-nl,refresh_existing,medium,Comparison page already exists
+cvster,competitor,covered,/cv-gids/werkcv-vs-cvster,refresh_existing,medium,Comparison page already exists
+cvmaker,competitor,covered,/cv-gids/werkcv-vs-cvmaker,refresh_existing,medium,Comparison page already exists
+gratis cv maken zonder kosten,free-download-risk,partial,/gratis-cv-maken,defensive_refresh_only,low,Page exists but needs careful expectation-setting
+cv maken gratis downloaden,free-download-risk,partial,/gratis-cv-maken,defensive_refresh_only,low,Good only as defensive FAQ coverage
+gratis cv maken en downloaden,free-download-risk,partial,/gratis-cv-maken,defensive_refresh_only,low,Good only as defensive FAQ coverage

@@ -1,0 +1,14 @@
+{
+  "name": "werkcv-salaris-tools",
+  "version": "0.1.1",
+  "private": true,
+  "description": "WordPress plugin scaffold for WerkCV salary tools.",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "lint:js": "wp-scripts lint-js"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^30.13.0"
+  }
+}

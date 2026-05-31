@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WerkCV Vacature Keyword Highlighter</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="popup-shell">
+      <header class="hero">
+        <p class="eyebrow">Dutch + English job scanner</p>
+        <h1>WerkCV Vacature Keyword Highlighter</h1>
+        <p class="hero-copy">
+          Scan the current job page, highlight CV-relevant terms, and surface the words worth reusing in your CV.
+        </p>
+      </header>
+
+      <section class="panel">
+        <div class="page-meta">
+          <p class="meta-label">Current page</p>
+          <p class="page-title" id="pageTitle">Loading tab...</p>
+          <p class="page-url" id="pageUrl"></p>
+        </div>
+
+        <div class="actions">
+          <button id="scanButton" class="primary" type="button">Scan current page</button>
+          <button id="clearButton" class="secondary" type="button">Remove highlights</button>
+        </div>
+
+        <p class="status" id="statusMessage">Ready to scan the current tab.</p>
+      </section>
+
+      <section class="panel results" id="resultsPanel" hidden>
+        <div class="summary-grid">
+          <article class="summary-card">
+            <p class="meta-label">Keywords found</p>
+            <p class="summary-value" id="highlightCount">0</p>
+          </article>
+          <article class="summary-card">
+            <p class="meta-label">Visible words</p>
+            <p class="summary-value" id="wordCount">0</p>
+          </article>
+        </div>
+
+        <article class="result-group">
+          <div class="group-heading">
+            <h2>Hard skills</h2>
+            <span id="hardSkillCount" class="count-pill">0</span>
+          </div>
+          <ul id="hardSkillsList" class="keyword-list"></ul>
+        </article>
+
+        <article class="result-group">
+          <div class="group-heading">
+            <h2>Soft skills</h2>
+            <span id="softSkillCount" class="count-pill">0</span>
+          </div>
+          <ul id="softSkillsList" class="keyword-list"></ul>
+        </article>
+
+        <article class="result-group">
+          <div class="group-heading">
+            <h2>Signals & themes</h2>
+            <span id="themeCount" class="count-pill">0</span>
+          </div>
+          <ul id="themesList" class="keyword-list"></ul>
+        </article>
+
+        <article class="result-group">
+          <div class="group-heading">
+            <h2>Credentials & languages</h2>
+            <span id="qualificationCount" class="count-pill">0</span>
+          </div>
+          <ul id="qualificationsList" class="keyword-list"></ul>
+        </article>
+      </section>
+
+      <section class="panel footer-panel">
+        <p class="footnote">
+          Local-only MVP. The extension scans the active tab inside the browser and does not require a WerkCV account.
+        </p>
+        <a
+          class="cta-link"
+          href="https://werkcv.nl/tools/cv-keywords?utm_source=chrome_extension&utm_medium=referral&utm_campaign=vacature_keyword_highlighter"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Open the deeper keyword workflow on WerkCV
+        </a>
+      </section>
+    </main>
+
+    <script src="shared.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

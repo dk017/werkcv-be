@@ -1,0 +1,82 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files
+.env
+.env.local
+.env*.local
+# but allow the example template
+!.env.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Claude Code project files
+.claude/
+
+# Internal planning docs
+AGENTS.md
+AUDIT_AND_ACTION_PLAN.md
+MASTER_ACTION_PLAN.md
+GROWTH_5K_MONTH_AUDIT.md
+
+# Windows artifacts
+nul
+
+# Screenshots
+screenshots/
+!wordpress-plugin/werkcv-salaris-tools/screenshots/
+!wordpress-plugin/werkcv-salaris-tools/screenshots/*.png
+
+/app/generated/prisma
+
+# Local scratch and recovery artifacts
+_write_pages.mjs
+add-ga.py
+add-price-id.py
+app-logs.txt
+test-polar.py
+public/Dhineshkumar R-cv (22).pdf
+public/Dhineshkumar R-cv (23).pdf
+public/Keyword Stats 2026-03-08 at 08_01_42.csv
+.codex-tmp/
+data/jobs/raw/
+data/jobs/normalized/
+data/jobs/derived/
+local/profile-photos/
+chrome-extension/artifacts/
+
+__pycache__/

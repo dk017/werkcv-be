@@ -1,0 +1,102 @@
+name: Build app image
+
+on:
+  workflow_dispatch:
+    inputs:
+      deploy:
+        description: "Deploy to Hetzner after pushing the image"
+        required: true
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+      deploy_dir:
+        description: "Remote checkout directory"
+        required: true
+        default: "/opt/werkcv"
+
+jobs:
+  build:
+    name: Build and push Docker image
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    outputs:
+      image: ${{ steps.meta.outputs.image }}
+      tag: ${{ steps.meta.outputs.tag }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set image metadata
+        id: meta
+        run: |
+          OWNER_LC="$(echo "$GITHUB_REPOSITORY_OWNER" | tr '[:upper:]' '[:lower:]')"
+          echo "image=ghcr.io/${OWNER_LC}/werkcv-app" >> "$GITHUB_OUTPUT"
+          echo "tag=sha-${GITHUB_SHA}" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: |
+            ${{ steps.meta.outputs.image }}:${{ steps.meta.outputs.tag }}
+            ${{ steps.meta.outputs.image }}:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  deploy:
+    name: Deploy image to Hetzner
+    runs-on: ubuntu-latest
+    needs: build
+    if: ${{ github.event.inputs.deploy == 'true' }}
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout deploy files
+        uses: actions/checkout@v4
+
+      - name: Copy compose override
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.HETZNER_HOST }}
+          username: ${{ secrets.HETZNER_USER }}
+          key: ${{ secrets.HETZNER_SSH_KEY }}
+          source: "docker-compose.ghcr.yml"
+          target: "${{ github.event.inputs.deploy_dir }}"
+
+      - name: Pull and restart app
+        uses: appleboy/ssh-action@v1.2.0
+        env:
+          WERKCV_IMAGE: ${{ needs.build.outputs.image }}:${{ needs.build.outputs.tag }}
+          GHCR_USER: ${{ github.actor }}
+          GHCR_TOKEN: ${{ secrets.GHCR_READ_TOKEN }}
+        with:
+          host: ${{ secrets.HETZNER_HOST }}
+          username: ${{ secrets.HETZNER_USER }}
+          key: ${{ secrets.HETZNER_SSH_KEY }}
+          envs: WERKCV_IMAGE,GHCR_USER,GHCR_TOKEN
+          script: |
+            set -eu
+            cd "${{ github.event.inputs.deploy_dir }}"
+            if [ -n "${GHCR_TOKEN:-}" ]; then
+              echo "$GHCR_TOKEN" | docker login ghcr.io -u "$GHCR_USER" --password-stdin
+            fi
+            docker compose -p werkcv -f docker-compose.ghcr.yml pull app
+            docker compose -p werkcv -f docker-compose.ghcr.yml up -d app
+            docker compose -p werkcv ps

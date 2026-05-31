@@ -1,0 +1,314 @@
+▲ Next.js 16.1.1 (webpack)
+- Environments: .env
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 105s
+  Running TypeScript ...
+  Collecting page data using 3 workers ...
+⚠ Using edge runtime on a page currently disables static generation for that page
+  Generating static pages using 3 workers (0/475) ...
+Failed to load dynamic font for ✓ . Error: Error: Failed to download dynamic font. Status: 400
+    at ignore-listed frames
+  Generating static pages using 3 workers (118/475) 
+  Generating static pages using 3 workers (237/475) 
+  Generating static pages using 3 workers (356/475) 
+✓ Generating static pages using 3 workers (475/475) in 73s
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)                                                    Revalidate  Expire
+┌ ○ /
+├ ○ /_not-found
+├ ○ /.well-known/ai.txt                                                1d      1y
+├ ○ /about
+├ ○ /agency
+├ ○ /ai/faq.json                                                       1d      1y
+├ ○ /ai/service.json                                                   1d      1y
+├ ○ /ai/summary.json                                                   1d      1y
+├ ƒ /api/ats-rewrite
+├ ƒ /api/auth/logout
+├ ƒ /api/auth/me
+├ ƒ /api/auth/request-code
+├ ƒ /api/auth/verify-code
+├ ƒ /api/b2b-lead
+├ ƒ /api/contact
+├ ƒ /api/cover-letter
+├ ƒ /api/create-cv
+├ ƒ /api/keyword-scan
+├ ƒ /api/linkedin-to-cv
+├ ƒ /api/linkedin-to-cv-preview
+├ ƒ /api/parse-cv
+├ ƒ /api/parse-cv-only
+├ ƒ /api/pdf
+├ ƒ /api/profile-photo
+├ ƒ /api/profile-photo/checkout
+├ ƒ /api/profile-photo/images/[imageId]
+├ ƒ /api/tools/ats-checker
+├ ƒ /api/tools/career-change-advisor
+├ ƒ /api/tools/cv-keywords
+├ ƒ /api/tools/cv-samenvatting
+├ ƒ /api/tools/cv-score
+├ ƒ /api/tools/cv-vacature-match
+├ ƒ /api/tools/job-title-translator
+├ ƒ /api/tools/opzeggingsbrief
+├ ƒ /api/tools/profieltekst
+├ ƒ /api/tools/salaris-onderhandeling
+├ ƒ /api/tools/sollicitatiebrief
+├ ƒ /api/tools/sollicitatiegesprek-quiz
+├ ƒ /api/tools/vaardigheden
+├ ƒ /api/tools/werkervaring-bullets
+├ ƒ /api/translate-resume
+├ ƒ /api/webhooks/dodo
+├ ƒ /api/webhooks/polar
+├ ○ /ats-cv-template
+├ ○ /baan-wisselen
+├ ○ /beste-cv-maker-nederland
+├ ○ /chrome/vacature-keyword-highlighter
+├ ○ /chrome/vacature-keyword-highlighter/privacy
+├ ○ /competenties-voorbeelden
+├ ○ /contact
+├ ○ /curriculum-vitae-maken
+├ ○ /curriculum-vitae-template
+├ ○ /cv-aanmaken
+├ ○ /cv-checken
+├ ○ /cv-gids
+├ ● /cv-gids/[slug]
+│ ├ /cv-gids/cv-voorbeeld-administratief-medewerker
+│ ├ /cv-gids/cv-voorbeeld-administratief-medewerker-parttime
+│ ├ /cv-gids/cv-voorbeeld-klantenservice-medewerker
+│ └ [+58 more paths]
+├ ƒ /cv-gids/[slug]/opengraph-image
+├ ○ /cv-gids/cv-builder-opzeggen-en-alternatieven
+├ ○ /cv-gids/cv-voorbeelden-per-situatie
+├ ○ /cv-maken
+├ ○ /cv-maken-15-jarige
+├ ○ /cv-maken-16-jarige
+├ ○ /cv-maken-amsterdam
+├ ○ /cv-maken-belgie
+├ ○ /cv-maken-eenmalig-betalen
+├ ○ /cv-maken-gratis
+├ ○ /cv-maken-in-engels
+├ ○ /cv-maken-in-word
+├ ○ /cv-maken-op-mobiel
+├ ○ /cv-maken-pdf
+├ ○ /cv-maken-rotterdam
+├ ○ /cv-maken-sjabloon
+├ ○ /cv-maken-student
+├ ○ /cv-maken-template
+├ ○ /cv-maken-utrecht
+├ ○ /cv-maken-zonder-abonnement
+├ ○ /cv-maken-zonder-verborgen-kosten
+├ ○ /cv-middelbare-school-student
+├ ○ /cv-nakijken
+├ ○ /cv-nl-opzeggen
+├ ○ /cv-ontwerpen
+├ ○ /cv-opmaak-voorbeeld
+├ ○ /cv-opmaken
+├ ○ /cv-opstellen
+├ ○ /cv-optimaliseren
+├ ○ /cv-samenvatting-voorbeelden
+├ ○ /cv-template-administratief-medewerker
+├ ○ /cv-template-horeca-medewerker
+├ ○ /cv-template-klantenservice-medewerker
+├ ○ /cv-template-magazijnmedewerker
+├ ○ /cv-template-marketing-medewerker
+├ ○ /cv-template-office-manager
+├ ○ /cv-template-projectmanager
+├ ○ /cv-template-software-ontwikkelaar
+├ ○ /cv-template-verkoopmedewerker
+├ ○ /cv-template-verpleegkundige
+├ ○ /cv-template-vlaanderen
+├ ○ /cv-template-word
+├ ○ /cv-tips
+├ ● /cv-tips/[slug]
+│ ├ /cv-tips/cv-schrijven-tips
+│ ├ /cv-tips/profieltekst-schrijven
+│ ├ /cv-tips/cv-werkervaring-beschrijven
+│ └ [+42 more paths]
+├ ƒ /cv-tips/[slug]/opengraph-image
+├ ○ /cv-tools-links
+├ ○ /cv-verbeteren
+├ ƒ /cv-voorbeeld
+├ ○ /cv-voorbeeld-belgie
+├ ○ /cv-voorbeeld-starter
+├ ○ /cv-voorbeeld-student
+├ ƒ /cv-voorbeeld/[...slug]
+├ ○ /cv-voorbeelden
+├ ● /cv-voorbeelden/[category]
+│ ├ /cv-voorbeelden/studenten-en-starters
+│ ├ /cv-voorbeelden/zorg-en-welzijn
+│ ├ /cv-voorbeelden/technologie-en-ict
+│ └ [+7 more paths]
+├ ● /cv-voorbeelden/[category]/[slug]
+│ ├ /cv-voorbeelden/studenten-en-starters/student-cv
+│ ├ /cv-voorbeelden/studenten-en-starters/afgestudeerde-cv
+│ ├ /cv-voorbeelden/studenten-en-starters/eerste-baan-starter
+│ └ [+77 more paths]
+├ ƒ /cv-voorbeelden/[category]/[slug]/opengraph-image
+├ ○ /cvmaker-opzeggen
+├ ○ /cvster-opzeggen
+├ ƒ /editor
+├ ○ /eerste-cv-maken
+├ ○ /eigenschappen-cv-voorbeelden
+├ ƒ /embed/minimumloon-checker
+├ ƒ /embed/netto-bruto-calculator
+├ ƒ /embed/vakantiegeld-berekenen
+├ ○ /en
+├ ○ /en/ats-resume-netherlands
+├ ○ /en/cv-format-netherlands-english
+├ ○ /en/cv-netherlands-without-dutch-language
+├ ○ /en/cv-or-resume-netherlands
+├ ○ /en/dutch-cv-examples
+├ ○ /en/dutch-cv-for-expats
+├ ○ /en/dutch-cv-template
+├ ƒ /en/editor
+├ ○ /en/english-cv-example-netherlands
+├ ○ /en/english-cv-example-software-engineer-netherlands
+├ ○ /en/english-speaking-companies-netherlands
+├ ○ /en/expat-cv-netherlands
+├ ○ /en/guides
+├ ● /en/guides/[slug]
+│ ├ /en/guides/dutch-cv-for-expats
+│ ├ /en/guides/netherlands-cv-photo-rules
+│ ├ /en/guides/cv-format-netherlands-english
+│ └ [+7 more paths]
+├ ƒ /en/guides/[slug]/opengraph-image
+├ ○ /en/highly-skilled-migrant-cv-netherlands
+├ ○ /en/netherlands-cv-format
+├ ○ /en/profile-photo
+├ ○ /en/resume-optimizer-netherlands
+├ ○ /en/templates
+├ ○ /engels-cv-template
+├ ○ /engels-cv-voorbeeld
+├ ○ /engelstalige-bedrijven-in-nederland
+├ ○ /faq
+├ ƒ /followups
+├ ○ /for-coaches
+├ ○ /goedkoopste-cv-maker-nederland
+├ ○ /gratis-cv-maken
+├ ○ /gratis-cv-template
+├ ƒ /icon
+├ ○ /korte-motivatiebrief-voorbeeld
+├ ○ /livecareer-opzeggen
+├ ○ /llms.txt                                                          1d      1y
+├ ƒ /login
+├ ○ /loopbaancoach
+├ ○ /makkelijk-cv-maken
+├ ƒ /mijn-cvs
+├ ○ /modern-cv-template
+├ ○ /modern-cv-voorbeeld
+├ ○ /mooie-cv-maken
+├ ○ /motivatiebrief-layout
+├ ○ /motivatiebrief-schrijven
+├ ○ /motivatiebrief-stage-voorbeeld
+├ ○ /motivatiebrief-voorbeeld
+├ ○ /motivatiebrief-zonder-werkervaring
+├ ○ /novoresume-opzeggen
+├ ○ /online-cv-maken
+├ ○ /ontslagbrief-schrijven
+├ ○ /open-sollicitatie-brief
+├ ○ /opengraph-image
+├ ○ /opzegtermijn-berekenen
+├ ○ /over-ons
+├ ○ /partners
+├ ○ /prijzen
+├ ○ /privacy
+├ ○ /professioneel-cv-maken
+├ ○ /professioneel-cv-template
+├ ○ /professioneel-cv-voorbeeld
+├ ○ /profielfoto-cv-maken
+├ ○ /profieltekst-cv-voorbeelden
+├ ○ /resume-io-opzeggen
+├ ○ /robots.txt
+├ ○ /rss.xml                                                           1h      1y
+├ ○ /salaris
+├ ● /salaris/[slug]
+│ ├ /salaris/tandarts
+│ ├ /salaris/software-ontwikkelaar
+│ ├ /salaris/systeembeheerder
+│ └ [+15 more paths]
+├ ○ /sitemap.xml
+├ ○ /snel-cv-maken
+├ ○ /sollicitatiebrief-beginnen
+├ ○ /sollicitatiebrief-belgie
+├ ○ /sollicitatiebrief-in-engels
+├ ○ /sollicitatiebrief-maken
+├ ○ /sollicitatiebrief-voorbeeld
+├ ○ /sollicitatiebrief-voorbeeld-administratief-medewerker
+├ ○ /sollicitatiebrief-voorbeeld-horeca-medewerker
+├ ○ /sollicitatiebrief-voorbeeld-klantenservice
+├ ○ /sollicitatiebrief-voorbeeld-magazijnmedewerker
+├ ○ /sollicitatiebrief-voorbeeld-marketing
+├ ○ /sollicitatiebrief-voorbeeld-office-manager
+├ ○ /sollicitatiebrief-voorbeeld-projectmanager
+├ ○ /sollicitatiebrief-voorbeeld-software-ontwikkelaar
+├ ○ /sollicitatiebrief-voorbeeld-verkoopmedewerker
+├ ○ /sollicitatiebrief-voorbeeld-verpleegkundige
+├ ○ /sollicitatiebrief-voorbeelden
+├ ○ /stage-cv-maken
+├ ƒ /success
+├ ○ /templates
+├ ○ /tools
+├ ○ /tools/30-procent-regeling-checker
+├ ○ /tools/aanzegvergoeding-checker
+├ ○ /tools/aow-leeftijd-checker
+├ ○ /tools/ats-cv-checker
+├ ○ /tools/career-change-advisor
+├ ○ /tools/cv-keywords
+├ ○ /tools/cv-samenvatting-generator
+├ ○ /tools/cv-score
+├ ○ /tools/cv-score/methodologie
+├ ○ /tools/cv-vacature-match
+├ ○ /tools/eindejaarsuitkering-berekenen
+├ ○ /tools/eu-blue-card-checker
+├ ○ /tools/job-title-translator
+├ ○ /tools/kennismigrant-salary-checker
+├ ○ /tools/kilometervergoeding-berekenen
+├ ○ /tools/linkedin-naar-cv
+├ ○ /tools/loonstrook-uitleggen
+├ ○ /tools/minimumloon-checker
+├ ○ /tools/netto-bruto-calculator
+├ ○ /tools/opzeggingsbrief-generator
+├ ○ /tools/opzegtermijn-berekenen
+├ ○ /tools/overuren-berekenen
+├ ○ /tools/parttime-salaris-calculator
+├ ○ /tools/proeftijd-checker
+├ ○ /tools/profieltekst-generator
+├ ○ /tools/salaris-calculator
+├ ○ /tools/salaris-onderhandeling
+├ ○ /tools/salaris-vergelijker
+├ ○ /tools/sollicitatiebrief-generator
+├ ○ /tools/sollicitatiegesprek-quiz
+├ ○ /tools/studieschuld-berekenen
+├ ○ /tools/thuiswerkvergoeding-berekenen
+├ ○ /tools/transitievergoeding-berekenen
+├ ○ /tools/uurloon-calculator
+├ ○ /tools/vaardigheden-generator
+├ ○ /tools/vakantiedagen-berekenen
+├ ○ /tools/vakantiegeld-berekenen
+├ ○ /tools/verlofuren-omrekenen
+├ ○ /tools/werkervaring-bullets
+├ ○ /tools/ww-dagloon-checker
+├ ○ /tools/ww-duur-checker
+├ ○ /tools/ww-recht-checker
+├ ○ /tools/ziekengeld-berekenen
+├ ○ /tools/zoekjaar-checker
+├ ○ /tools/zwangerschapsverlof-berekenen
+├ ○ /tools/zzp-uurtarief-berekenen
+├ ○ /transitievergoeding-berekenen
+├ ○ /vaardigheden-cv-voorbeelden
+├ ○ /vakbonden-en-cv-belgie
+├ ○ /voorwaarden
+├ ○ /werkervaring-cv-voorbeelden
+├ ○ /wordpress/salaris-tools-plugin
+├ ○ /wordpress/salaris-tools-plugin/installatie
+├ ○ /wordpress/salaris-tools-plugin/privacy
+└ ○ /zety-opzeggen
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
