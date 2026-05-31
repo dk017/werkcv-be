@@ -20,6 +20,14 @@ type DodoCheckoutResponse = {
   checkout_url?: string;
 };
 
+export function getDodoSiteHost(): string | null {
+  try {
+    return new URL(APP_URL).host.toLowerCase();
+  } catch {
+    return null;
+  }
+}
+
 export function isDodoEnabledForCheckout(
   checkoutProduct: CheckoutProduct,
   selectedAddons: CheckoutAddon[] = []
@@ -56,6 +64,7 @@ export async function buildDodoCheckoutURL(
       cv_id: cvId,
       product: CV_DOWNLOAD_PRODUCT,
       provider: "dodo",
+      site_host: getDodoSiteHost(),
     },
     customization: {
       show_order_details: true,

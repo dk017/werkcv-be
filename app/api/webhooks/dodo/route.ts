@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/prisma";
-import { verifyDodoWebhookSignature } from "@/lib/dodo";
+import { getDodoSiteHost, verifyDodoWebhookSignature } from "@/lib/dodo";
 import { reportOpsIncident } from "@/lib/ops-alerts";
 import { CV_DOWNLOAD_PRODUCT } from "@/lib/polar";
 
@@ -117,9 +117,15 @@ export async function POST(request: NextRequest) {
   const cvId = metadataString(metadata, "cv_id") || metadataString(metadata, "cvId");
   const product = metadataString(metadata, "product") || CV_DOWNLOAD_PRODUCT;
   const email = data.customer?.email || metadataString(metadata, "email") || "";
+  const eventSiteHost = metadataString(metadata, "site_host")?.toLowerCase() || null;
+  const expectedSiteHost = getDodoSiteHost();
   const externalPaymentId = data.payment_id || data.id || data.checkout_session_id;
   const amountCents = readAmountCents(data);
   const currency = readCurrency(data);
+
+  if (expectedSiteHost && eventSiteHost && eventSiteHost !== expectedSiteHost) {
+    return NextResponse.json({ status: "ignored", reason: "site_host_mismatch" });
+  }
 
   if (!externalPaymentId) {
     await reportOpsIncident({
@@ -165,10 +171,30 @@ export async function POST(request: NextRequest) {
   const cvDocument = await prismaWithAttributionExtensions.cVDocument.findUnique({
     where: { id: cvId },
     select: {
+      id: true,
       attribution: true,
       sourceCluster: true,
     },
   });
+
+  if (!cvDocument) {
+    await reportOpsIncident({
+      event: "ops_payment_webhook_failed",
+      route: "/api/webhooks/dodo",
+      stage: "cv_not_found_for_payment",
+      error: new Error("CV not found for payment webhook"),
+      cvId,
+      userEmail: email,
+      notifyUser: false,
+      context: {
+        dodoPaymentId: externalPaymentId,
+        metadata,
+        eventSiteHost,
+        expectedSiteHost,
+      },
+    });
+    return NextResponse.json({ status: "ignored", reason: "cv_not_found" });
+  }
 
   let order;
   try {
