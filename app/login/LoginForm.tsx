@@ -7,19 +7,19 @@ import { getStoredAttribution } from "@/lib/analytics";
 
 const loginCopy = {
   nl: {
-    title: "Log in om je cv op te slaan",
+    title: "Meld je aan om je cv op te slaan",
     intro: "Geen wachtwoord nodig. We sturen een eenmalige code naar je e-mailadres.",
     emailLabel: "E-mailadres",
-    emailPlaceholder: "jij@voorbeeld.nl",
-    sendCode: "Stuur login code",
+    emailPlaceholder: "jij@voorbeeld.be",
+    sendCode: "Stuur inlogcode",
     sending: "Bezig...",
     sentTo: "Code gestuurd naar",
     codeLabel: "6-cijferige code",
     verify: "Verifieer en ga verder",
     otherEmail: "Ander e-mailadres gebruiken",
-    requestError: "Kon geen login code versturen.",
+    requestError: "Kon geen inlogcode versturen.",
     verifyError: "Code is ongeldig of verlopen.",
-    devCode: "Dev code",
+    devCode: "Testcode",
   },
   en: {
     title: "Log in to save your CV",
@@ -34,7 +34,7 @@ const loginCopy = {
     otherEmail: "Use a different email address",
     requestError: "Could not send the login code.",
     verifyError: "The code is invalid or expired.",
-    devCode: "Dev code",
+    devCode: "Testcode",
   },
 };
 
@@ -111,7 +111,7 @@ export default function LoginForm({ initialNext }: LoginFormProps) {
       <div className="w-full max-w-md bg-white border border-slate-200 rounded-2xl shadow-sm p-6">
         <div className="mb-5">
           <Link href={locale === "en" ? "/en" : "/"} className="font-semibold text-lg text-slate-900">
-            Werk<span className="bg-emerald-200 px-1 rounded-sm">CV</span>.nl
+            Werk<span className="bg-emerald-200 px-1 rounded-sm">CV</span>.be
           </Link>
           <h1 className="text-xl font-semibold text-slate-900 mt-3">{copy.title}</h1>
           <p className="text-sm text-slate-600 mt-1">{copy.intro}</p>

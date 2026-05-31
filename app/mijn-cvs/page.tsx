@@ -24,7 +24,7 @@ export default async function MijnCvsPage() {
             <div className="bg-white border-b border-slate-200">
                 <div className="max-w-5xl mx-auto px-5 py-4 flex items-center justify-between">
                     <Link href="/" className="font-semibold text-xl tracking-tight text-slate-900">
-                        Werk<span className="bg-emerald-200 px-1 rounded-sm">CV</span>.nl
+                        Werk<span className="bg-emerald-200 px-1 rounded-sm">CV</span>.be
                     </Link>
                     <div className="flex items-center gap-4">
                         <span className="text-sm text-slate-500 hidden sm:block">{user.email}</span>

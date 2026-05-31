@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
     title: "Privacybeleid - WerkCV",
-    description: "Hoe WerkCV.nl omgaat met je persoonsgegevens. Lees ons privacybeleid over gegevensverzameling, AVG-rechten en beveiliging.",
+    description: "Hoe WerkCV.be omgaat met je persoonsgegevens. Lees ons privacybeleid over gegevensverzameling, AVG-rechten en beveiliging.",
 };
 
 export default function PrivacyPage() {
@@ -36,7 +36,7 @@ export default function PrivacyPage() {
                         <section>
                             <h2 className="text-lg font-black text-black mb-2">1. Wie zijn wij</h2>
                             <p className="font-medium leading-relaxed">
-                                WerkCV.nl is een online CV-builder waarmee je eenvoudig een professioneel CV kunt maken en downloaden als PDF.
+                                WerkCV.be is een online CV-builder waarmee je eenvoudig een professioneel cv kunt maken en downloaden als PDF.
                                 Je kunt contact met ons opnemen via het e-mailadres op onze website.
                             </p>
                         </section>
@@ -79,7 +79,7 @@ export default function PrivacyPage() {
                         <section>
                             <h2 className="text-lg font-black text-black mb-2">5. Cookies</h2>
                             <p className="font-medium leading-relaxed">
-                                WerkCV.nl gebruikt alleen functionele cookies die noodzakelijk zijn voor de werking van de website.
+                                WerkCV.be gebruikt alleen functionele cookies die noodzakelijk zijn voor de werking van de website.
                                 Wij gebruiken geen tracking cookies of cookies van derden voor advertentiedoeleinden.
                             </p>
                         </section>

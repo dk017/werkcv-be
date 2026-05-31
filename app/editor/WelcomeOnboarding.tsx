@@ -61,7 +61,7 @@ export default function WelcomeOnboarding({
       <div className="w-full max-w-lg border-4 border-black bg-[#FFFEF0] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
         <div className="border-b-4 border-black bg-yellow-400 px-6 py-5">
           <h2 className="text-2xl font-black text-black">
-            {isEnglish ? "Welcome to WerkCV.nl!" : "Welkom bij WerkCV.nl!"}
+            {isEnglish ? "Welcome to WerkCV.be!" : "Welkom bij WerkCV.be!"}
           </h2>
           <p className="mt-1 text-sm font-medium text-black/80">
             {isEnglish

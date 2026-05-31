@@ -103,7 +103,7 @@ export function buildOgImage({
 
                 {/* Footer tagline */}
                 <div style={{ fontSize: 22, color: '#666', fontWeight: 700 }}>
-                    werkcv.nl · professioneel cv maken · eenmalig €4,99
+                    werkcv.be · professioneel cv maken · eenmalig €4,99
                 </div>
             </div>
 

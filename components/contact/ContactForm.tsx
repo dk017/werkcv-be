@@ -157,7 +157,7 @@ export default function ContactForm() {
               onFocus={handleFieldFocus}
               onChange={(event) => handleChange("email", event.target.value)}
               className="w-full border-2 border-black bg-[#FFFEF0] px-4 py-3 text-sm font-medium text-black outline-none transition-colors focus:bg-white"
-              placeholder="naam@voorbeeld.nl"
+              placeholder="naam@voorbeeld.be"
             />
             {getErrorMessage(fieldErrors, "email") ? (
               <span className="mt-2 block text-xs font-bold text-red-700">

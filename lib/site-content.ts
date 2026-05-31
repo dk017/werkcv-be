@@ -44,7 +44,7 @@ export const homepageFaqItems = [
   {
     question: "Verschilt een Belgisch cv van een Nederlands cv?",
     answer:
-      "Licht. Belgische werkgevers verwachten iets vaker een foto en soms extra persoonlijke context. De opbouw en lengte blijven meestal vergelijkbaar: helder, relevant en meestal één tot twee pagina's.",
+      "Ja, licht. In België is een professionele foto op je cv gebruikelijker en verwachten werkgevers soms wat meer persoonlijke context. De basis blijft hetzelfde: een helder, relevant cv van meestal één tot twee pagina's.",
   },
 ];
 

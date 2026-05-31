@@ -710,7 +710,7 @@ export default function Editor({
                     <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
                         <Link href="/" className="flex items-center gap-1">
                             <span className="font-semibold text-lg sm:text-xl tracking-tight text-slate-900">
-                                Werk<span className="bg-[#4ECDC4] px-1 rounded-sm">CV</span>.nl
+                                Werk<span className="bg-[#4ECDC4] px-1 rounded-sm">CV</span>.be
                             </span>
                         </Link>
                         <Link
@@ -935,11 +935,11 @@ export default function Editor({
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                                 <div>
                                     <label className="block text-[11px] font-semibold uppercase tracking-wide text-slate-500 mb-1.5">Email</label>
-                                    <input {...register("personal.email")} placeholder="email@voorbeeld.nl" className={inputClass} style={inputStyle} />
+                                    <input {...register("personal.email")} placeholder="email@voorbeeld.be" className={inputClass} style={inputStyle} />
                                 </div>
                                 <div>
                                     <label className="block text-[11px] font-semibold uppercase tracking-wide text-slate-500 mb-1.5">{tr("Telefoonnummer", "Phone number")}</label>
-                                    <input {...register("personal.phone")} placeholder={tr("06 12345678", "+31 6 12345678")} className={inputClass} style={inputStyle} />
+                                    <input {...register("personal.phone")} placeholder={tr("0470 12 34 56", "+32 470 12 34 56")} className={inputClass} style={inputStyle} />
                                 </div>
                             </div>
 

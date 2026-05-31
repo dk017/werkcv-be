@@ -772,7 +772,7 @@ export function ReferencesSection({ control, register, uiLanguage = "nl" }: Sect
                                 <label className="block text-[11px] font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Email</label>
                                 <input
                                     {...register(`references.${index}.email` as any)}
-                                    placeholder="jan@bedrijf.nl"
+                                    placeholder="jan@bedrijf.be"
                                     className={inputClass}
                                     style={inputStyle}
                                 />
@@ -781,7 +781,7 @@ export function ReferencesSection({ control, register, uiLanguage = "nl" }: Sect
                                 <label className="block text-[11px] font-semibold text-slate-500 uppercase tracking-wide mb-1.5">{t(uiLanguage, "Telefoon", "Phone")}</label>
                                 <input
                                     {...register(`references.${index}.phone` as any)}
-                                    placeholder={t(uiLanguage, "06 12345678", "+31 6 12345678")}
+                                    placeholder={t(uiLanguage, "0470 12 34 56", "+32 470 12 34 56")}
                                     className={inputClass}
                                     style={inputStyle}
                                 />

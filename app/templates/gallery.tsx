@@ -399,7 +399,7 @@ export default function TemplateGallery({
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <Link href={isEnglish ? "/en" : "/"} className="flex items-center gap-2">
             <span className="text-3xl font-black tracking-tight text-black">
-              Werk<span className="bg-yellow-400 px-1">CV</span>.nl
+              Werk<span className="bg-yellow-400 px-1">CV</span>.be
             </span>
           </Link>
           <div className="flex items-center gap-4">

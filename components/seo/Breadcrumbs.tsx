@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { siteConfig } from '@/config/site';
 
 interface BreadcrumbItem {
     label: string;
@@ -18,7 +19,7 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
             '@type': 'ListItem',
             position: index + 1,
             name: item.label,
-            item: `https://werkcv.nl${item.href}`,
+            item: `${siteConfig.baseUrl}${item.href}`,
         })),
     };
 
