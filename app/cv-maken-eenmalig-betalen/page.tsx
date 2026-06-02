@@ -299,12 +299,13 @@ export default function CvMakenEenmaligBetalenPage() {
 
       <Footer />
       <MobileStickyCta
+        text="CV maken en eenmalig betalen"
+        buttonLabel={`Start voor ${cvDownloadPrice.display}`}
         href="/editor"
         trackingLocation="cv-maken-eenmalig-betalen:sticky_mobile"
-        trackingLabel="Maak je cv voor eenmalig €4,99"
-      >
-        Maak je cv voor eenmalig {cvDownloadPrice.display}
-      </MobileStickyCta>
+        trackingLabel={`Start voor ${cvDownloadPrice.display}`}
+        ctaEventName="cta_one_time_payment_hero"
+      />
     </div>
   );
 }
