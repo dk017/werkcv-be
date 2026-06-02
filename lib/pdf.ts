@@ -1017,9 +1017,11 @@ function buildSingleColumnHTML(data: CVData, theme: ColorTheme, templateId: stri
                 ${e(data.personal.name || rt('nameFallback'))}
             </h1>
             ${data.personal.title ? `<p style="font-size: 16px; margin: 0; color: ${theme.textMuted};">${e(data.personal.title)}</p>` : ''}
-            <div style="display: flex; justify-content: center; gap: 24px; margin-top: 16px; font-size: 13px; color: ${theme.textMuted}; flex-wrap: wrap;">
-                ${contactItems.map((item, index) => `<span>${index > 0 ? '&#8226; ' : ''}${linkifyText(item)}</span>`).join('')}
-            </div>
+            ${contactItems.length > 0 ? `
+                <div style="margin-top: 16px; font-size: 11px; line-height: 1.5; color: ${theme.textMuted}; text-align: center;">
+                    ${contactItems.map((item) => linkifyText(item)).join(' &#8226; ')}
+                </div>
+            ` : ''}
             ${personalDetailItems.length > 0 ? `
                 <div style="display: flex; justify-content: center; gap: 18px; margin-top: 12px; font-size: 11px; color: ${theme.textMuted}; flex-wrap: wrap;">
                     ${personalDetailItems.map((item) => `<span>${item}</span>`).join('')}
@@ -1044,9 +1046,9 @@ function buildSingleColumnHTML(data: CVData, theme: ColorTheme, templateId: stri
             </h2>
             ${data.experience.map(exp => `
                 <div class="cv-item" style="margin-bottom: 20px;">
-                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px;">
                         <h3 style="font-weight: bold; font-size: 14px; margin: 0; color: ${theme.text};">${e(exp.role)}</h3>
-                        <span style="font-size: 12px; color: ${theme.textMuted};">${e(exp.start)} - ${e(exp.end)}</span>
+                        <span style="font-size: 12px; color: ${theme.textMuted}; white-space: nowrap; text-align: left; width: 96px; flex: 0 0 96px;">${e(exp.start)} - ${e(exp.end)}</span>
                     </div>
                     <div style="font-size: 13px; color: ${theme.secondary}; margin-top: 2px;">
                         ${e(exp.company)}${exp.location ? ` | ${e(exp.location)}` : ''}
@@ -1069,9 +1071,9 @@ function buildSingleColumnHTML(data: CVData, theme: ColorTheme, templateId: stri
             </h2>
             ${data.internships.map(intern => `
                 <div class="cv-item" style="margin-bottom: 16px;">
-                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px;">
                         <h3 style="font-weight: bold; font-size: 13px; margin: 0; color: ${theme.text};">${e(intern.role)}</h3>
-                        <span style="font-size: 12px; color: ${theme.textMuted};">${e(intern.start)} - ${e(intern.end)}</span>
+                        <span style="font-size: 12px; color: ${theme.textMuted}; white-space: nowrap; text-align: left; width: 96px; flex: 0 0 96px;">${e(intern.start)} - ${e(intern.end)}</span>
                     </div>
                     <div style="font-size: 12px; color: ${theme.textMuted}; margin-top: 2px;">${e(intern.company)}</div>
                     ${intern.description ? `<p style="font-size: 12px; margin-top: 6px; line-height: 1.5; color: ${theme.textMuted};">${nl2brLinkified(intern.description)}</p>` : ''}
@@ -1091,12 +1093,12 @@ function buildSingleColumnHTML(data: CVData, theme: ColorTheme, templateId: stri
                 ${rt('educationSingle')}
             </h2>
             ${data.education.map(edu => `
-                <div class="cv-item" style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px;">
+                <div class="cv-item" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 12px;">
                     <div>
                         <h3 style="font-weight: bold; font-size: 13px; margin: 0; color: ${theme.text};">${e(edu.degree)}</h3>
                         <div style="font-size: 12px; color: ${theme.textMuted}; margin-top: 2px;">${e(edu.school)}</div>
                     </div>
-                    <span style="font-size: 12px; color: ${theme.textMuted};">${e(edu.start)} - ${e(edu.end)}</span>
+                    <span style="font-size: 12px; color: ${theme.textMuted}; white-space: nowrap; text-align: left; width: 96px; flex: 0 0 96px;">${e(edu.start)} - ${e(edu.end)}</span>
                 </div>
             `).join('')}
         </div>
