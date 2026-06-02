@@ -158,7 +158,7 @@ export default function CvMakenEenmaligBetalenPage() {
                 href="/editor"
                 trackingLocation="cv-maken-eenmalig-betalen:hero_primary"
                 trackingLabel={`Maak je cv voor eenmalig ${cvDownloadPrice.display}`}
-                ctaEventName="cta_one_time_payment_be_hero"
+                ctaEventName="cta_one_time_payment_hero"
                 className="border-4 border-black bg-yellow-400 px-5 py-3 text-base font-black text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
               >
                 Maak je cv voor eenmalig {cvDownloadPrice.display}
@@ -238,7 +238,7 @@ export default function CvMakenEenmaligBetalenPage() {
               href="/editor"
               trackingLocation="cv-maken-eenmalig-betalen:mid_primary"
               trackingLabel={`Maak mijn cv voor eenmalig ${cvDownloadPrice.display}`}
-              ctaEventName="cta_one_time_payment_be_mid"
+              ctaEventName="cta_one_time_payment_mid"
               className="inline-block border-4 border-black bg-yellow-400 px-5 py-3 text-base font-black text-black"
             >
               Maak mijn cv voor eenmalig {cvDownloadPrice.display}
