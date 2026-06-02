@@ -96,6 +96,9 @@ export default function TemplatesPage() {
             <Link href="/cv-maken-zonder-abonnement" className="border-2 border-black bg-white px-4 py-2 text-sm font-black text-black">
               Zonder abonnement
             </Link>
+            <Link href="/en" className="border-2 border-black bg-white px-4 py-2 text-sm font-black text-black">
+              English CV route
+            </Link>
             <Link
               href="/gratis-cv-template"
               className="border-2 border-black bg-yellow-400 px-4 py-2 text-sm font-black text-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
@@ -143,6 +146,9 @@ export default function TemplatesPage() {
               </Link>
               <Link href="/motivatiebrief-layout" className="border-2 border-black bg-white px-3 py-2 text-sm font-black text-black hover:bg-yellow-100 transition-colors">
                 Motivatiebrief layout
+              </Link>
+              <Link href="/en/cv-template-belgium" className="border-2 border-black bg-white px-3 py-2 text-sm font-black text-black hover:bg-yellow-100 transition-colors">
+                English CV Belgium
               </Link>
               <Link href="/prijzen" className="border-2 border-black bg-yellow-200 px-3 py-2 text-sm font-black text-black hover:bg-yellow-300 transition-colors">
                 Prijsmodel bekijken
@@ -202,6 +208,11 @@ export default function TemplatesPage() {
                 href: "/motivatiebrief-voorbeeld",
                 title: "Motivatiebrief voorbeeld",
                 body: "Handig als je ook een korte, passende brief wilt schrijven die op je cv voortbouwt.",
+              },
+              {
+                href: "/en/guides/adapt-resume-for-belgium",
+                title: "Adapt resume for Belgium",
+                body: "Gebruik deze route als je al een Engelstalig resume hebt, maar het nog moet lokaliseren voor België.",
               },
             ].map((item) => (
               <Link

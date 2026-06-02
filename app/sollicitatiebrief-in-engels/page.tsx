@@ -131,6 +131,11 @@ const intentLinks = [
     label: "Zorg voor een cv dat taal en positionering van je brief ondersteunt",
     description: "Dat voorkomt een Engelse brief naast een cv dat nog te lokaal of inconsistent voelt.",
   },
+  {
+    href: "/en/cv-template-belgium",
+    label: "Gebruik de English CV route voor Belgium als je ook je cv nog moet lokaliseren",
+    description: "Handig wanneer je sollicitatiebrief al in het Engels moet, maar je cv nog te generiek internationaal aanvoelt.",
+  },
 ];
 
 export const metadata: Metadata = buildDutchMetadata({

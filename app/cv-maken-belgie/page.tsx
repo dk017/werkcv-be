@@ -50,6 +50,7 @@ export default function Page() {
         { href: "/cv-template-vlaanderen", label: "CV template Vlaanderen" },
         { href: "/profieltekst-cv-voorbeelden", label: "Profieltekst cv voorbeelden" },
         { href: "/sollicitatiebrief-belgie", label: "Sollicitatiebrief België" },
+        { href: "/en", label: "English CV for Belgium" },
       ]}
     />
   );
