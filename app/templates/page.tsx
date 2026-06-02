@@ -135,8 +135,14 @@ export default function TemplatesPage() {
               <Link href="/ats-cv-template" className="border-2 border-black bg-white px-3 py-2 text-sm font-black text-black hover:bg-yellow-100 transition-colors">
                 ATS cv template
               </Link>
+              <Link href="/profieltekst-cv-voorbeelden" className="border-2 border-black bg-white px-3 py-2 text-sm font-black text-black hover:bg-yellow-100 transition-colors">
+                Profieltekst voorbeelden
+              </Link>
               <Link href="/sollicitatiebrief-belgie" className="border-2 border-black bg-white px-3 py-2 text-sm font-black text-black hover:bg-yellow-100 transition-colors">
                 Sollicitatiebrief België
+              </Link>
+              <Link href="/motivatiebrief-layout" className="border-2 border-black bg-white px-3 py-2 text-sm font-black text-black hover:bg-yellow-100 transition-colors">
+                Motivatiebrief layout
               </Link>
               <Link href="/prijzen" className="border-2 border-black bg-yellow-200 px-3 py-2 text-sm font-black text-black hover:bg-yellow-300 transition-colors">
                 Prijsmodel bekijken
@@ -186,6 +192,16 @@ export default function TemplatesPage() {
                 href: "/ats-cv-template",
                 title: "ATS cv template",
                 body: "Handig als scanbaarheid en sollicitatiesoftware je hoogste prioriteit zijn.",
+              },
+              {
+                href: "/profieltekst-cv-voorbeelden",
+                title: "Profieltekst voorbeelden",
+                body: "Gebruik deze route als je cv-inhoud eerst sterker moet worden voordat layout echt verschil maakt.",
+              },
+              {
+                href: "/motivatiebrief-voorbeeld",
+                title: "Motivatiebrief voorbeeld",
+                body: "Handig als je ook een korte, passende brief wilt schrijven die op je cv voortbouwt.",
               },
             ].map((item) => (
               <Link

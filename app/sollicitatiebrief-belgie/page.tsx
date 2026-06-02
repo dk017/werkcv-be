@@ -39,6 +39,7 @@ export default function Page() {
           paragraphs: [
             "De meeste kandidaten lopen niet vast op motivatie, maar op tempo en structuur. Ze hebben een vacature, willen reageren en verliezen tijd aan oude documenten, opmaak of verspreide bestanden. Daarom loont het om je cv eerst goed neer te zetten en daarna je brief daarop te laten aansluiten.",
             "WerkCV richt zich op dat cv-deel: professioneel, snel en zonder abonnement. Zodra je cv duidelijk staat, wordt het ook eenvoudiger om een passende motivatiebrief te schrijven die daar logisch op voortbouwt.",
+            "Hou ook rekening met taalkeuze. In Vlaanderen werkt Nederlands meestal het best, terwijl in Brussel of internationale contexten een Engelse brief soms logischer is. Daarom loont het om niet alleen naar voorbeeldzinnen te kijken, maar ook naar layout en taal per vacature.",
           ],
         },
       ]}
@@ -48,6 +49,9 @@ export default function Page() {
         { href: "/cv-maken-belgie", label: "CV maken in België" },
         { href: "/cv-voorbeeld-belgie", label: "CV voorbeeld België" },
         { href: "/cv-template-vlaanderen", label: "CV template Vlaanderen" },
+        { href: "/motivatiebrief-layout", label: "Motivatiebrief layout" },
+        { href: "/motivatiebrief-voorbeeld", label: "Motivatiebrief voorbeeld" },
+        { href: "/sollicitatiebrief-in-engels", label: "Sollicitatiebrief in Engels" },
       ]}
     />
   );
