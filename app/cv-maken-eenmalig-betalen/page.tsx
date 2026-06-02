@@ -232,7 +232,7 @@ export default function CvMakenEenmaligBetalenPage() {
               Eénmalig betalen is vaak onderdeel van een bredere vergelijking
             </h2>
             <p className="mt-4 text-sm font-medium leading-relaxed text-slate-200">
-              Wie een cv-builder zonder maandmodel kiest, vergelijkt vaak ook het huidige pakket met de volgende stap. Check daarom eerst je Belgische vakantiegeld en vakantiedagen als deel van die afweging.
+              Wie een cv-builder zonder maandmodel kiest, vergelijkt vaak ook het huidige pakket met de volgende stap. Check daarom eerst je Belgische vakantiegeld, vakantiedagen en opzegtermijn als deel van die afweging.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
               <TrackedLandingLink
@@ -250,6 +250,14 @@ export default function CvMakenEenmaligBetalenPage() {
                 className="inline-block border-4 border-white bg-transparent px-5 py-3 text-base font-black text-white"
               >
                 Check je Belgische vakantiedagen
+              </TrackedLandingLink>
+              <TrackedLandingLink
+                href="/opzegtermijn-berekenen-belgie"
+                trackingLocation="cv-maken-eenmalig-betalen:package_check_notice_period"
+                trackingLabel="Check je Belgische opzegtermijn"
+                className="inline-block border-4 border-white bg-transparent px-5 py-3 text-base font-black text-white"
+              >
+                Check je Belgische opzegtermijn
               </TrackedLandingLink>
             </div>
           </article>
@@ -350,4 +358,6 @@ export default function CvMakenEenmaligBetalenPage() {
     </div>
   );
 }
+
+
 

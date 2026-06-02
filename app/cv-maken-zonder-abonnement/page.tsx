@@ -270,7 +270,7 @@ export default function CvMakenZonderAbonnementPage() {
               Vergelijk eerst je Belgische pakket, dan pas je volgende cv-versie
             </h2>
             <p className="mt-4 text-sm font-medium leading-relaxed text-slate-200">
-              Wie geen abonnement wil, vergelijkt meestal ook zijn huidige voorwaarden. Gebruik deze twee Belgische tools om te zien hoeveel vakantie en vakantiegeld je vandaag ongeveer opbouwt.
+              Wie geen abonnement wil, vergelijkt meestal ook zijn huidige voorwaarden. Gebruik deze Belgische tools om te zien hoeveel vakantie, vakantiegeld en opzegtermijn vandaag mee in je afweging zit.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
               <TrackedLandingLink
@@ -288,6 +288,14 @@ export default function CvMakenZonderAbonnementPage() {
                 className="inline-block border-4 border-white bg-transparent px-5 py-3 text-base font-black text-white"
               >
                 Check je Belgische vakantiedagen
+              </TrackedLandingLink>
+              <TrackedLandingLink
+                href="/opzegtermijn-berekenen-belgie"
+                trackingLocation="cv-maken-zonder-abonnement:package_check_notice_period"
+                trackingLabel="Check je Belgische opzegtermijn"
+                className="inline-block border-4 border-white bg-transparent px-5 py-3 text-base font-black text-white"
+              >
+                Check je Belgische opzegtermijn
               </TrackedLandingLink>
             </div>
           </article>
@@ -577,4 +585,6 @@ export default function CvMakenZonderAbonnementPage() {
     </div>
   );
 }
+
+
 

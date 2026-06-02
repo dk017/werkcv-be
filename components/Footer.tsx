@@ -17,6 +17,7 @@ const mainLinks = [
 const toolLinks = [
     { href: "/vakantiegeld-berekenen-belgie", label: "Vakantiegeld België" },
     { href: "/vakantiedagen-berekenen-belgie", label: "Vakantiedagen België" },
+    { href: "/opzegtermijn-berekenen-belgie", label: "Opzegtermijn België" },
     { href: "/templates", label: "Professionele templates" },
     { href: "/gratis-cv-template", label: "Gratis cv-template" },
     { href: "/cv-maken-zonder-abonnement", label: "Geen abonnement" },
@@ -181,4 +182,5 @@ export default function Footer() {
         </footer>
     );
 }
+
 

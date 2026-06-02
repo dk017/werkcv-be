@@ -275,7 +275,7 @@ export default function PrijzenPage() {
                             Kijk niet alleen naar prijs, maar ook naar je huidige voorwaarden
                         </h2>
                         <p className="mt-4 text-sm font-medium leading-relaxed text-slate-200">
-                            Veel Belgische bezoekers die prijsmodellen vergelijken, willen tegelijk weten hoeveel vakantie en vakantiegeld ze vandaag eigenlijk opbouwen. Dat geeft context voor een betere jobwissel.
+                            Veel Belgische bezoekers die prijsmodellen vergelijken, willen tegelijk weten hoeveel vakantie, vakantiegeld en opzegtermijn er vandaag mee in de vergelijking zit. Dat geeft context voor een betere jobwissel.
                         </p>
                         <div className="mt-5 flex flex-wrap gap-3">
                             <TrackedLandingLink
@@ -293,6 +293,14 @@ export default function PrijzenPage() {
                                 className="border-4 border-white bg-transparent px-4 py-3 text-sm font-black text-white"
                             >
                                 Check je Belgische vakantiedagen
+                            </TrackedLandingLink>
+                            <TrackedLandingLink
+                                href="/opzegtermijn-berekenen-belgie"
+                                trackingLocation="prijzen:package_check_notice_period"
+                                trackingLabel="Check je Belgische opzegtermijn"
+                                className="border-4 border-white bg-transparent px-4 py-3 text-sm font-black text-white"
+                            >
+                                Check je Belgische opzegtermijn
                             </TrackedLandingLink>
                         </div>
                     </div>
@@ -491,6 +499,8 @@ export default function PrijzenPage() {
         </div>
     );
 }
+
+
 
 
 
