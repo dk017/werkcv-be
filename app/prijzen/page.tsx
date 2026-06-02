@@ -51,6 +51,12 @@ const pricingIntentCards = [
         href: "/cv-maken-zonder-abonnement",
         label: "Lees hoe eenmalig betalen werkt",
     },
+    {
+        title: "CV maken en éénmalig betalen",
+        body: "Deze zoekintentie gaat expliciet over een cv-builder zonder maandkost. Gebruik deze pagina als je het betaalmoment en de Belgische context duidelijk wilt zien.",
+        href: "/cv-maken-eenmalig-betalen",
+        label: "Bekijk éénmalig betalen",
+    },
 ] as const;
 
 const pricingFaqs = [
@@ -379,11 +385,17 @@ export default function PrijzenPage() {
                             <Link href="/cv-maken-zonder-abonnement" className="border-2 border-black bg-yellow-200 px-3 py-2 text-sm font-black text-black hover:bg-yellow-300 transition-colors">
                                 CV zonder abonnement
                             </Link>
+                            <Link href="/cv-maken-eenmalig-betalen" className="border-2 border-black bg-yellow-200 px-3 py-2 text-sm font-black text-black hover:bg-yellow-300 transition-colors">
+                                CV éénmalig betalen
+                            </Link>
                             <Link href="/cv-maken-belgie" className="border-2 border-black bg-blue-200 px-3 py-2 text-sm font-black text-black hover:bg-blue-300 transition-colors">
                                 CV maken in België
                             </Link>
                             <Link href="/cv-maken-gratis" className="border-2 border-black bg-yellow-200 px-3 py-2 text-sm font-black text-black hover:bg-yellow-300 transition-colors">
                                 Gratis cv maken
+                            </Link>
+                            <Link href="/ats-cv-template" className="border-2 border-black bg-[#FFFEF9] px-3 py-2 text-sm font-black text-black hover:bg-yellow-100 transition-colors">
+                                ATS cv template
                             </Link>
                             <Link href="/gratis-cv-template" className="border-2 border-black bg-[#FFFEF9] px-3 py-2 text-sm font-black text-black hover:bg-yellow-100 transition-colors">
                                 Gratis cv template

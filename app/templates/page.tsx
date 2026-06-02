@@ -123,11 +123,17 @@ export default function TemplatesPage() {
               <Link href="/cv-maken-belgie" className="border-2 border-black bg-white px-3 py-2 text-sm font-black text-black hover:bg-yellow-100 transition-colors">
                 CV maken in België
               </Link>
+              <Link href="/cv-maken-eenmalig-betalen" className="border-2 border-black bg-white px-3 py-2 text-sm font-black text-black hover:bg-yellow-100 transition-colors">
+                Eénmalig betalen
+              </Link>
               <Link href="/cv-voorbeeld-belgie" className="border-2 border-black bg-white px-3 py-2 text-sm font-black text-black hover:bg-yellow-100 transition-colors">
                 CV voorbeeld België
               </Link>
               <Link href="/cv-template-vlaanderen" className="border-2 border-black bg-white px-3 py-2 text-sm font-black text-black hover:bg-yellow-100 transition-colors">
                 CV template Vlaanderen
+              </Link>
+              <Link href="/ats-cv-template" className="border-2 border-black bg-white px-3 py-2 text-sm font-black text-black hover:bg-yellow-100 transition-colors">
+                ATS cv template
               </Link>
               <Link href="/sollicitatiebrief-belgie" className="border-2 border-black bg-white px-3 py-2 text-sm font-black text-black hover:bg-yellow-100 transition-colors">
                 Sollicitatiebrief België
@@ -167,14 +173,19 @@ export default function TemplatesPage() {
                 body: "Bekijk hoe gratis bouwen en eenmalig downloaden werkt voordat je begint.",
               },
               {
+                href: "/cv-maken-eenmalig-betalen",
+                title: "Eénmalig betalen",
+                body: "Gebruik deze route als je specifiek zoekt naar een cv-builder zonder maandkost of proefperiode.",
+              },
+              {
                 href: "/prijzen",
                 title: "Prijsmodel",
                 body: "Controleer wat je betaalt bij PDF-download en wat later opnieuw downloaden betekent.",
               },
               {
-                href: "/sollicitatiebrief-belgie",
-                title: "Sollicitatiebrief België",
-                body: "Handig als je naast je cv ook meteen een motivatiebrief wilt voorbereiden.",
+                href: "/ats-cv-template",
+                title: "ATS cv template",
+                body: "Handig als scanbaarheid en sollicitatiesoftware je hoogste prioriteit zijn.",
               },
             ].map((item) => (
               <Link
