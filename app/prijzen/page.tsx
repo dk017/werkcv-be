@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import TrackedLandingLink from "@/components/analytics/TrackedLandingLink";
 import { siteConfig } from "@/config/site";
 import { applicationBundlePrice, cvDownloadPrice, profilePhotoPrice } from "@/lib/site-content";
 
@@ -265,6 +266,52 @@ export default function PrijzenPage() {
                     </div>
                 </div>
 
+                <section className="mb-16 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+                    <div className="border-4 border-black bg-black p-6 text-white shadow-[6px_6px_0px_0px_rgba(250,204,21,1)]">
+                        <p className="text-xs font-black uppercase tracking-[0.18em] text-yellow-300">
+                            Vergelijk totaalpakket
+                        </p>
+                        <h2 className="mt-2 text-3xl font-black text-white">
+                            Kijk niet alleen naar prijs, maar ook naar je huidige voorwaarden
+                        </h2>
+                        <p className="mt-4 text-sm font-medium leading-relaxed text-slate-200">
+                            Veel Belgische bezoekers die prijsmodellen vergelijken, willen tegelijk weten hoeveel vakantie en vakantiegeld ze vandaag eigenlijk opbouwen. Dat geeft context voor een betere jobwissel.
+                        </p>
+                        <div className="mt-5 flex flex-wrap gap-3">
+                            <TrackedLandingLink
+                                href="/vakantiegeld-berekenen-belgie"
+                                trackingLocation="prijzen:package_check_holiday_pay"
+                                trackingLabel="Check je Belgisch vakantiegeld"
+                                className="border-4 border-black bg-yellow-400 px-4 py-3 text-sm font-black text-black"
+                            >
+                                Check je Belgisch vakantiegeld
+                            </TrackedLandingLink>
+                            <TrackedLandingLink
+                                href="/vakantiedagen-berekenen-belgie"
+                                trackingLocation="prijzen:package_check_leave_days"
+                                trackingLabel="Check je Belgische vakantiedagen"
+                                className="border-4 border-white bg-transparent px-4 py-3 text-sm font-black text-white"
+                            >
+                                Check je Belgische vakantiedagen
+                            </TrackedLandingLink>
+                        </div>
+                    </div>
+
+                    <div className="border-4 border-black bg-white p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                        <p className="text-xs font-black uppercase tracking-[0.18em] text-slate-600">
+                            Waarom dit hier staat
+                        </p>
+                        <div className="mt-4 space-y-3 text-sm font-medium leading-relaxed text-slate-700">
+                            <p>
+                                Een cv-builder is zelden een los productbesluit. Vaak zit er een vergelijking achter tussen huidige voorwaarden en een volgende stap.
+                            </p>
+                            <p>
+                                Daarom linken we op de money pages bewust naar tools die helpen om je huidige Belgische pakket beter te begrijpen, voordat je aan een nieuwe sollicitatie begint.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
                 <section className="mb-16 border-4 border-black bg-white p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
                     <p className="text-xs font-black uppercase tracking-[0.18em] text-gray-600">
                         Prijsmodel
@@ -444,4 +491,6 @@ export default function PrijzenPage() {
         </div>
     );
 }
+
+
 

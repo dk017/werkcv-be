@@ -20,6 +20,7 @@ const routes = [
   "/cv-maken-gratis",
   "/vakbonden-en-cv-belgie",
   "/vakantiegeld-berekenen-belgie",
+  "/vakantiedagen-berekenen-belgie",
   "/studentenjob-650-uren",
   "/profielfoto-cv-maken",
 ];
@@ -32,4 +33,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route === "/" ? 1 : route === "/cv-maken-gratis" ? 0.92 : 0.78,
   }));
 }
+
 

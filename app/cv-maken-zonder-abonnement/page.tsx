@@ -261,6 +261,47 @@ export default function CvMakenZonderAbonnementPage() {
           </aside>
         </section>
 
+        <section className="mb-12 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+          <article className="border-4 border-black bg-black p-6 text-white shadow-[6px_6px_0px_0px_rgba(250,204,21,1)]">
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-yellow-300">
+              Totale voorwaarden
+            </p>
+            <h2 className="mt-2 text-3xl font-black text-white">
+              Vergelijk eerst je Belgische pakket, dan pas je volgende cv-versie
+            </h2>
+            <p className="mt-4 text-sm font-medium leading-relaxed text-slate-200">
+              Wie geen abonnement wil, vergelijkt meestal ook zijn huidige voorwaarden. Gebruik deze twee Belgische tools om te zien hoeveel vakantie en vakantiegeld je vandaag ongeveer opbouwt.
+            </p>
+            <div className="mt-5 flex flex-wrap gap-3">
+              <TrackedLandingLink
+                href="/vakantiegeld-berekenen-belgie"
+                trackingLocation="cv-maken-zonder-abonnement:package_check_holiday_pay"
+                trackingLabel="Check je Belgisch vakantiegeld"
+                className="inline-block border-4 border-black bg-yellow-400 px-5 py-3 text-base font-black text-black"
+              >
+                Check je Belgisch vakantiegeld
+              </TrackedLandingLink>
+              <TrackedLandingLink
+                href="/vakantiedagen-berekenen-belgie"
+                trackingLocation="cv-maken-zonder-abonnement:package_check_leave_days"
+                trackingLabel="Check je Belgische vakantiedagen"
+                className="inline-block border-4 border-white bg-transparent px-5 py-3 text-base font-black text-white"
+              >
+                Check je Belgische vakantiedagen
+              </TrackedLandingLink>
+            </div>
+          </article>
+
+          <article className="border-4 border-black bg-white p-6 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-slate-600">
+              Waarom dit helpt
+            </p>
+            <p className="mt-4 text-sm font-medium leading-relaxed text-slate-700">
+              Sollicitanten stappen zelden over voor één reden. Ze kijken naar loon, verlof, timing en hoeveel rust ze in het proces willen. Die context maakt je cv-beslissing concreter dan een puur prijsvergelijk.
+            </p>
+          </article>
+        </section>
+
         <section className="mb-12 border-4 border-black bg-white p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
           <p className="text-xs font-black uppercase tracking-[0.22em] text-slate-600">
             CV maker eenmalig
@@ -536,3 +577,4 @@ export default function CvMakenZonderAbonnementPage() {
     </div>
   );
 }
+

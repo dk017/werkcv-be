@@ -1,52 +1,52 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
-import HolidayPayBelgiumChecker from "@/components/belgium/HolidayPayBelgiumChecker";
+import VacationDaysBelgiumChecker from "@/components/belgium/VacationDaysBelgiumChecker";
 import { FAQJsonLd } from "@/components/seo/JsonLd";
 import { buildDutchMetadata } from "@/lib/page-metadata";
 
 const faqItems = [
   {
-    question: "Voor wie is deze vakantiegeld checker bedoeld?",
+    question: "Voor wie is deze Belgische vakantiedagen checker bedoeld?",
     answer:
-      "Voor bedienden in de Belgische privésector met een vast maandloon. Voor arbeiders, variabel loon, interim, vertrekvakantiegeld of publieke sector is deze vereenvoudigde berekening niet geschikt.",
+      "Voor bedienden in de Belgische privésector die hun gewone wettelijke vakantie willen inschatten en eventueel willen zien of aanvullende vakantie dit jaar relevant kan zijn.",
   },
   {
-    question: "Wat is het verschil tussen enkel en dubbel vakantiegeld?",
+    question: "Waarom rekenen jullie met het huidige arbeidsstelsel?",
     answer:
-      "Enkel vakantiegeld is je gewone loon tijdens je wettelijke vakantiedagen. Dubbel vakantiegeld is de extra toeslag boven op dat normale loon.",
+      "Omdat Belgische vakantie maximaal vier weken bedraagt in het arbeidsstelsel dat geldt op het moment dat je je vakantiedagen opneemt. Daarom vraagt deze pagina naar je huidige aantal werkdagen per week.",
   },
   {
-    question: "Waarom tonen jullie geen netto vakantiegeld?",
+    question: "Wanneer komt aanvullende vakantie in beeld?",
     answer:
-      "Omdat fiscale en sociale inhoudingen op vakantiegeld in België te sterk afhangen van je persoonlijke en payrollsituatie. Een ruwe netto-indicatie zou hier sneller misleiden dan helpen.",
+      "Aanvullende vakantie kan relevant worden als je dit jaar een activiteit start, hervat of je arbeidsregime verhoogt. Er geldt eerst een aanloopperiode van 3 maanden of 90 kalenderdagen en je gewone vakantiedagen moeten opgebruikt zijn.",
   },
   {
-    question: "Hoe wordt dubbel vakantiegeld voor bedienden berekend?",
+    question: "Zitten sectorale extra verlofdagen in deze tool?",
     answer:
-      "Voor bedienden in de privésector komt het dubbel vakantiegeld neer op 1/12 van 92% van het brutoloon van de maand waarin de hoofdvakantie wordt genomen, per opgebouwde of gelijkgestelde maand in het vakantiedienstjaar.",
+      "Nee. Deze tool focust op gewone wettelijke vakantie en een voorzichtige planning van aanvullende vakantie. Extra sectorale of ondernemingsgebonden verlofdagen kunnen apart gelden.",
   },
 ];
 
 export const metadata: Metadata = buildDutchMetadata({
-  title: "Vakantiegeld Berekenen België | Bedienden in de Privésector | WerkCV",
+  title: "Vakantiedagen Berekenen België | Gewone en Aanvullende Vakantie | WerkCV",
   description:
-    "Bereken je dubbel vakantiegeld in België als bediende met een vast maandloon. Duidelijke scope, officiële context en zonder misleidende netto-schatting.",
-  path: "/vakantiegeld-berekenen-belgie",
+    "Bereken je gewone vakantiedagen in België en zie of aanvullende vakantie dit jaar relevant kan zijn. Duidelijke scope voor bedienden in de privésector.",
+  path: "/vakantiedagen-berekenen-belgie",
   keywords: [
-    "vakantiegeld berekenen belgie",
-    "dubbel vakantiegeld bediende berekenen",
-    "vakantiegeld bediende belgie",
-    "hoeveel vakantiegeld belgie",
-    "vakantiedagen berekenen belgie bediende",
+    "vakantiedagen berekenen belgie",
+    "gewone vakantie bediende belgie",
+    "aanvullende vakantie berekenen belgie",
+    "hoeveel vakantiedagen belgie",
+    "4 weken vakantie belgie",
   ],
   languages: {
-    "nl-BE": "https://werkcv.be/vakantiegeld-berekenen-belgie",
-    "x-default": "https://werkcv.be/vakantiegeld-berekenen-belgie",
+    "nl-BE": "https://werkcv.be/vakantiedagen-berekenen-belgie",
+    "x-default": "https://werkcv.be/vakantiedagen-berekenen-belgie",
   },
 });
 
-export default function VakantiegeldBerekenenBelgiePage() {
+export default function VakantiedagenBerekenenBelgiePage() {
   return (
     <main className="min-h-screen bg-[#fffef4] text-black">
       <FAQJsonLd questions={faqItems} />
@@ -68,18 +68,14 @@ export default function VakantiegeldBerekenenBelgiePage() {
               </div>
 
               <h1 className="max-w-4xl text-4xl font-black leading-tight md:text-5xl">
-                Vakantiegeld berekenen in België, zonder te doen alsof één formule voor iedereen klopt
+                Vakantiedagen berekenen in België, met gewone en aanvullende vakantie uit elkaar gehouden
               </h1>
               <p className="mt-6 max-w-3xl text-lg font-medium leading-8 text-slate-700">
-                Belgische zoekers krijgen vaak een snelle rekensom zonder
-                onderscheid tussen bedienden, arbeiders, variabel loon,
-                aanvullende vakantie of vertrekvakantiegeld. Deze pagina kiest
-                bewust voor een smallere maar betrouwbaardere route:{" "}
-                <span className="font-black text-black">
-                  dubbel vakantiegeld voor bedienden in de privésector met een
-                  vast maandloon
-                </span>
-                .
+                In België is “hoeveel vakantiedagen heb ik?” zelden een simpele teller.
+                Je gewone vakantie hangt af van je prestaties in het vorige jaar,
+                terwijl aanvullende vakantie pas speelt als je dit jaar startte,
+                hervatte of je regime verhoogde. Daarom toont deze pagina beide
+                lagen apart in plaats van alles op één hoop te gooien.
               </p>
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -104,16 +100,14 @@ export default function VakantiegeldBerekenenBelgiePage() {
               </p>
               <div className="mt-5 space-y-4 text-sm leading-7 text-slate-700">
                 <p>
-                  <span className="font-black text-black">Wel:</span> een
-                  duidelijke schatting voor bedienden met een vast maandloon.
+                  <span className="font-black text-black">Wel:</span> gewone wettelijke vakantie ramen en aanvullende vakantie zorgvuldig signaleren.
                 </p>
                 <p>
-                  <span className="font-black text-black">Niet:</span> een
-                  generieke “Belgische” calculator voor alle statuten.
+                  <span className="font-black text-black">Niet:</span> sectorale extra dagen, ambtenarenregimes of een volledige loonbrief simuleren.
                 </p>
                 <p>
                   <span className="font-black text-black">Bronbasis:</span>{" "}
-                  actuele officiële uitleg van Sociale Zekerheid en RJV,
+                  actuele uitleg van Sociale Zekerheid, Belgium.be en RJV,
                   geraadpleegd op 2 juni 2026.
                 </p>
               </div>
@@ -122,7 +116,7 @@ export default function VakantiegeldBerekenenBelgiePage() {
         </div>
       </section>
 
-      <HolidayPayBelgiumChecker />
+      <VacationDaysBelgiumChecker />
 
       <section className="border-b-4 border-black bg-[#fffef4]">
         <div className="mx-auto grid max-w-5xl gap-10 px-6 py-16 md:grid-cols-[1.5fr_0.9fr]">
@@ -133,72 +127,96 @@ export default function VakantiegeldBerekenenBelgiePage() {
               </h2>
               <div className="mt-4 space-y-4 text-base leading-8 text-slate-700">
                 <p>
-                  In Nederland werkt een brede vakantiegeldcalculator vaak met
-                  één basisregel rond 8 procent. In België is dat te grof. De
-                  berekening hangt onder meer af van je statuut, je loonvorm,
-                  het vakantiedienstjaar en situaties zoals aanvullende
-                  vakantie, uitdiensttreding of een wijziging van arbeidsduur.
+                  De Nederlandse route draait vaak om vakantie-uren op basis van
+                  contracturen. In België werkt de logica anders: gewone vakantie
+                  vertrekt uit het vakantiedienstjaar en aanvullende vakantie komt
+                  pas later in beeld als apart recht. Daarom zou een simpele kopie
+                  van de NL-tool hier inhoudelijk fout zijn.
                 </p>
                 <p>
-                  Daarom houdt WerkCV.be deze pagina bewust kleiner en
-                  specifieker. Niet omdat we minder willen tonen, maar omdat
-                  vertrouwen belangrijker is dan een brede tool met twijfelachtige
-                  uitkomsten.
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-black">
-                De regel waarop deze berekening steunt
-              </h2>
-              <div className="mt-4 space-y-4 text-base leading-8 text-slate-700">
-                <p>
-                  Voor bedienden in de privésector maakt de officiële uitleg een
-                  onderscheid tussen enkel en dubbel vakantiegeld. Het{" "}
-                  <span className="font-black text-black">enkel vakantiegeld</span>{" "}
-                  is het normale loon dat doorloopt tijdens je wettelijke
-                  vakantiedagen. Het{" "}
-                  <span className="font-black text-black">dubbel vakantiegeld</span>{" "}
-                  is de extra toeslag.
-                </p>
-                <p>
-                  Volgens de portaalsite van de Sociale Zekerheid komt dat
-                  dubbel vakantiegeld overeen met{" "}
-                  <span className="font-black text-black">
-                    1/12 van 92% van het brutoloon van de maand waarin je je
-                    hoofdvakantie neemt
-                  </span>
-                  , per opgebouwde of gelijkgestelde maand in het
-                  vakantiedienstjaar.
+                  Deze BE-pagina kiest daarom voor twee duidelijke vragen: wat levert
+                  vorig jaar je aan gewone vakantie op, en geeft dit jaar eventueel
+                  ruimte voor aanvullende vakantie? Die structuur is trager om te
+                  bouwen, maar veel eerlijker voor de bezoeker.
                 </p>
               </div>
             </div>
 
             <div>
               <h2 className="text-2xl font-black">
-                Wanneer je beter naar officiële kanalen gaat
+                De gewone regel: maximaal 4 weken in je huidige regime
               </h2>
               <div className="mt-4 space-y-4 text-base leading-8 text-slate-700">
                 <p>
-                  Gebruik deze pagina niet als je arbeider bent, vooral met
-                  variabel loon werkt, in de publieke sector zit, via interim
-                  werkt of met vertrekvakantiegeld te maken hebt. In die
-                  gevallen is de berekening te contextafhankelijk.
+                  Volgens het Belgische socialezekerheidsportaal heeft een bediende
+                  recht op maximaal 4 weken vakantie per jaar in het arbeidsstelsel
+                  dat geldt op het moment waarop de vakantiedagen worden opgenomen.
+                  Daarom kan dezelfde werknemer in een ander regime op een ander
+                  aantal dagen uitkomen, terwijl de logica van 4 weken gelijk blijft.
                 </p>
                 <p>
-                  Voor arbeiders en andere sectorale situaties is{" "}
+                  Voor gewone vakantie kijkt de werkgever naar de prestaties van het
+                  vakantiedienstjaar, dus het kalenderjaar dat voorafgaat aan het
+                  jaar waarin je je vakantie neemt. Dat is precies waarom deze
+                  checker naar vorig jaar vraagt in plaats van alleen naar je huidige
+                  contract.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-black">
+                De aanvullende regel: eerst 90 dagen, daarna pas extra ruimte
+              </h2>
+              <div className="mt-4 space-y-4 text-base leading-8 text-slate-700">
+                <p>
+                  Aanvullende vakantie is geen algemene bonus. Ze is bedoeld voor
+                  wie dit jaar een activiteit start, hervat of zijn arbeidsregime
+                  verhoogt en daardoor nog geen volledige gewone vakantie heeft.
+                  Daarvoor geldt eerst een aanloopperiode van 3 maanden of 90
+                  kalenderdagen.
+                </p>
+                <p>
+                  De aanvullende vakantie blijft bovendien een recht en geen
+                  verplichting. Ze kan pas worden opgenomen nadat de gewone
+                  vakantiedagen opgebruikt zijn. Daarom toont de checker de
+                  aanvullende teller apart en niet als automatisch vrij saldo.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-black">
+                Wanneer je beter naar de officiële route gaat
+              </h2>
+              <div className="mt-4 space-y-4 text-base leading-8 text-slate-700">
+                <p>
+                  Gebruik deze pagina niet als je arbeider bent, in de publieke
+                  sector werkt of vooral sectorale extra verlofdagen wilt kennen.
+                  Daarvoor spelen vakantiefondsen, cao&apos;s of werkgever-specifieke
+                  regels mee die deze publieke checker bewust niet probeert te
+                  raden.
+                </p>
+                <p>
+                  Voor de echte berekening of bevestiging zijn{" "}
                   <a
-                    href="https://www.rjv.fgov.be/nl/heb-ik-recht-op-vakantiegeld"
+                    href="https://www.socialsecurity.be/citizen/nl/verlof-tijdskrediet-en-loopbaanonderbreking/jaarlijkse-vakantie"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-black underline decoration-2 underline-offset-4"
+                  >
+                    Sociale Zekerheid
+                  </a>{" "}
+                  en{" "}
+                  <a
+                    href="https://www.rjv.fgov.be/nl/herbeginnen-of-aanvullende-vakantie"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-black underline decoration-2 underline-offset-4"
                   >
                     de RJV
                   </a>{" "}
-                  het juiste vertrekpunt. Voor bedienden met uitzonderingen of
-                  complexe dossiers is je werkgever of payrollpartner meestal
-                  leidend.
+                  de juiste eindpunten.
                 </p>
               </div>
             </div>
@@ -242,12 +260,12 @@ export default function VakantiegeldBerekenenBelgiePage() {
                 Sociale Zekerheid
               </a>
               <a
-                href="https://www.rjv.fgov.be/nl/heb-ik-recht-op-vakantiegeld"
+                href="https://www.rjv.fgov.be/nl/herbeginnen-of-aanvullende-vakantie"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-4 border-black bg-white px-4 py-3 text-center text-sm font-black text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
               >
-                RJV vakantiegeld
+                RJV aanvullende vakantie
               </a>
             </div>
 
@@ -257,22 +275,16 @@ export default function VakantiegeldBerekenenBelgiePage() {
               </p>
               <div className="mt-4 flex flex-col gap-3">
                 <Link
-                  href="/vakantiedagen-berekenen-belgie"
+                  href="/vakantiegeld-berekenen-belgie"
                   className="font-bold underline decoration-2 underline-offset-4"
                 >
-                  Vakantiedagen berekenen België
+                  Vakantiegeld berekenen België
                 </Link>
                 <Link
                   href="/cv-maken-belgie"
                   className="font-bold underline decoration-2 underline-offset-4"
                 >
                   CV maken in België
-                </Link>
-                <Link
-                  href="/vakbonden-en-cv-belgie"
-                  className="font-bold underline decoration-2 underline-offset-4"
-                >
-                  Werkzoekenden België
                 </Link>
                 <Link
                   href="/cv-maken-zonder-abonnement"
@@ -290,4 +302,3 @@ export default function VakantiegeldBerekenenBelgiePage() {
     </main>
   );
 }
-
