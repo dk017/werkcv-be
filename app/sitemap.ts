@@ -19,6 +19,7 @@ const routes = [
   "/sollicitatiebrief-belgie",
   "/cv-maken-gratis",
   "/vakbonden-en-cv-belgie",
+  "/vakantiegeld-berekenen-belgie",
   "/studentenjob-650-uren",
   "/profielfoto-cv-maken",
 ];

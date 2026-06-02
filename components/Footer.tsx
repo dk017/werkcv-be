@@ -15,6 +15,7 @@ const mainLinks = [
 ];
 
 const toolLinks = [
+    { href: "/vakantiegeld-berekenen-belgie", label: "Vakantiegeld België" },
     { href: "/templates", label: "Professionele templates" },
     { href: "/gratis-cv-template", label: "Gratis cv-template" },
     { href: "/cv-maken-zonder-abonnement", label: "Geen abonnement" },

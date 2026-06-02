@@ -48,6 +48,7 @@ export default function Page() {
         { href: "/cv-voorbeeld-belgie", label: "CV voorbeeld België" },
         { href: "/cv-maken-gratis", label: "CV gratis maken in België" },
         { href: "/cv-template-vlaanderen", label: "CV template Vlaanderen" },
+        { href: "/vakantiegeld-berekenen-belgie", label: "Vakantiegeld berekenen België" },
         { href: "/profieltekst-cv-voorbeelden", label: "Profieltekst cv voorbeelden" },
         { href: "/sollicitatiebrief-belgie", label: "Sollicitatiebrief België" },
         { href: "/en", label: "English CV for Belgium" },
