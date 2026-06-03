@@ -212,9 +212,37 @@ export async function getCheckoutURL(
     const resumeLanguage = getResumeLanguage(owned.data as CVData);
     const paymentProvider = isDodoEnabledForCheckout(safeProduct, safeAddons) ? 'dodo' : 'polar';
     try {
-        const url = paymentProvider === 'dodo'
-            ? await buildDodoCheckoutURL(cvId, email || user.email, resumeLanguage)
-            : await buildCheckoutURL(cvId, email || user.email, safeAddons, resumeLanguage, safeProduct);
+        let url: string;
+        if (paymentProvider === 'dodo') {
+            const checkout = await buildDodoCheckoutURL(cvId, email || user.email, resumeLanguage);
+            url = checkout.checkoutUrl;
+
+            if (checkout.sessionId) {
+                try {
+                    await prisma.paymentCheckout.upsert({
+                        where: { externalCheckoutId: checkout.sessionId },
+                        update: {
+                            cvId,
+                            email: email || user.email,
+                            siteHost: checkout.siteHost,
+                            product: safeProduct,
+                        },
+                        create: {
+                            provider: 'dodo',
+                            externalCheckoutId: checkout.sessionId,
+                            cvId,
+                            email: email || user.email,
+                            siteHost: checkout.siteHost,
+                            product: safeProduct,
+                        },
+                    });
+                } catch (persistError) {
+                    console.error('dodo_checkout_session_persist_failed', persistError);
+                }
+            }
+        } else {
+            url = await buildCheckoutURL(cvId, email || user.email, safeAddons, resumeLanguage, safeProduct);
+        }
         return { ok: true, url };
     } catch (error) {
         const { supportNotified } = await reportOpsIncident({

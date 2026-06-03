@@ -98,6 +98,22 @@ model Order {
   profilePhotoProject ProfilePhotoProject?
 }
 
+model PaymentCheckout {
+  id                 String   @id @default(cuid())
+  provider           String
+  externalCheckoutId String   @unique
+  cvId               String?
+  email              String?
+  siteHost           String?
+  product            String?
+  completedAt        DateTime?
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  @@index([provider, createdAt])
+  @@index([cvId])
+}
+
 model ProfilePhotoProject {
   id        String   @id @default(cuid())
   userId    String

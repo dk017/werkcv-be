@@ -20,6 +20,12 @@ type DodoCheckoutResponse = {
   checkout_url?: string;
 };
 
+export type DodoCheckoutResult = {
+  checkoutUrl: string;
+  sessionId: string | null;
+  siteHost: string | null;
+};
+
 export function getDodoSiteHost(): string | null {
   try {
     return new URL(APP_URL).host.toLowerCase();
@@ -43,7 +49,7 @@ export async function buildDodoCheckoutURL(
   cvId: string,
   email: string | undefined,
   resumeLanguage: ResumeLanguage = "nl"
-): Promise<string> {
+): Promise<DodoCheckoutResult> {
   if (!DODO_API_KEY) {
     throw new Error("DODO_API_KEY is not configured");
   }
@@ -108,7 +114,11 @@ export async function buildDodoCheckoutURL(
     throw new Error("Dodo checkout URL is missing from response");
   }
 
-  return checkout.checkout_url;
+  return {
+    checkoutUrl: checkout.checkout_url,
+    sessionId: checkout.session_id || null,
+    siteHost: getDodoSiteHost(),
+  };
 }
 
 function decodeWebhookSecret(secret: string): Buffer {

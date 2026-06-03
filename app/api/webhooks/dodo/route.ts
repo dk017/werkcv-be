@@ -42,6 +42,16 @@ type PrismaWithAttributionExtensions = typeof prisma & {
       sourceCluster?: string | null;
     } | null>;
   };
+  paymentCheckout: {
+    findUnique: (args: { where: { externalCheckoutId: string } }) => Promise<{
+      cvId?: string | null;
+      siteHost?: string | null;
+    } | null>;
+    updateMany: (args: {
+      where: { externalCheckoutId: string };
+      data: { completedAt: Date };
+    }) => Promise<unknown>;
+  };
   order: {
     create: (args: { data: Record<string, unknown> }) => Promise<{ id: string }>;
   };
@@ -120,11 +130,21 @@ export async function POST(request: NextRequest) {
   const eventSiteHost = metadataString(metadata, "site_host")?.toLowerCase() || null;
   const expectedSiteHost = getDodoSiteHost();
   const externalPaymentId = data.payment_id || data.id || data.checkout_session_id;
+  const checkoutSessionId = data.checkout_session_id || null;
   const amountCents = readAmountCents(data);
   const currency = readCurrency(data);
+  const localCheckout = checkoutSessionId
+    ? await prismaWithAttributionExtensions.paymentCheckout.findUnique({
+        where: { externalCheckoutId: checkoutSessionId },
+      })
+    : null;
 
   if (expectedSiteHost && eventSiteHost && eventSiteHost !== expectedSiteHost) {
     return NextResponse.json({ status: "ignored", reason: "site_host_mismatch" });
+  }
+
+  if (expectedSiteHost && localCheckout?.siteHost && localCheckout.siteHost !== expectedSiteHost) {
+    return NextResponse.json({ status: "ignored", reason: "checkout_site_host_mismatch" });
   }
 
   if (!externalPaymentId) {
@@ -178,6 +198,21 @@ export async function POST(request: NextRequest) {
   });
 
   if (!cvDocument) {
+    if (checkoutSessionId && !localCheckout && !eventSiteHost) {
+      console.warn(
+        JSON.stringify({
+          type: "payment_webhook_ignored",
+          provider: "dodo",
+          reason: "checkout_session_not_owned",
+          expectedSiteHost,
+          dodoPaymentId: externalPaymentId,
+          checkoutSessionId,
+          cvId,
+        })
+      );
+      return NextResponse.json({ status: "ignored", reason: "checkout_session_not_owned" });
+    }
+
     await reportOpsIncident({
       event: "ops_payment_webhook_failed",
       route: "/api/webhooks/dodo",
@@ -188,9 +223,11 @@ export async function POST(request: NextRequest) {
       notifyUser: false,
       context: {
         dodoPaymentId: externalPaymentId,
+        checkoutSessionId,
         metadata,
         eventSiteHost,
         expectedSiteHost,
+        localCheckoutSiteHost: localCheckout?.siteHost || null,
       },
     });
     return NextResponse.json({ status: "ignored", reason: "cv_not_found" });
@@ -251,6 +288,17 @@ export async function POST(request: NextRequest) {
     paymentMethod: data.payment_method || null,
     paymentMethodType: data.payment_method_type || null,
   };
+
+  if (checkoutSessionId) {
+    try {
+      await prismaWithAttributionExtensions.paymentCheckout.updateMany({
+        where: { externalCheckoutId: checkoutSessionId },
+        data: { completedAt: new Date() },
+      });
+    } catch (error) {
+      console.error("dodo_checkout_session_complete_failed", error);
+    }
+  }
 
   try {
     await prismaWithAttributionExtensions.analyticsEvent?.create({
